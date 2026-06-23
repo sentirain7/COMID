@@ -1,0 +1,32 @@
+# Viscosity calculation: {{ name }}
+timestep {{ timestep_fs }}
+fix nvt_{{ step_index }} all nvt temp {{ temp }} {{ temp }} {{ tdamp }}
+
+# Muller-Plathe reverse non-equilibrium MD
+fix {{ fix_id }} all viscosity 100 x z 20
+
+compute stress all stress/atom NULL
+compute temp_profile all temp/profile 1 0 0 z 20
+# Thermostat on the profile-unbiased temperature so it does not erase the
+# imposed Muller-Plathe momentum flux (else dv_x/dz collapses into noise).
+fix_modify nvt_{{ step_index }} temp temp_profile
+
+# Velocity profile for viscosity calculation (20 bins matching fix viscosity)
+compute chunks_{{ step_index }} all chunk/atom bin/1d z lower 0.05 units reduced
+fix vprof_{{ step_index }} all ave/chunk 100 10 1000 chunks_{{ step_index }} vx file vprofile_{{ name }}.dat
+
+thermo {{ thermo_interval }}
+thermo_style custom step temp pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong f_{{ fix_id }}
+thermo_modify flush yes
+dump d_{{ step_index }} all custom {{ dump_interval }} dump_{{ name }}.lammpstrj id type xu yu zu x y z vx vy vz
+
+run {{ nsteps }}
+unfix nvt_{{ step_index }}
+unfix {{ fix_id }}
+unfix vprof_{{ step_index }}
+# Reset thermo before write_restart so its System init does not reference the
+# now-removed f_{{ fix_id }} fix (LAMMPS: "Could not find thermo fix ID").
+thermo_style custom step temp pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong
+uncompute chunks_{{ step_index }}
+undump d_{{ step_index }}
+write_restart restart.{{ name }}

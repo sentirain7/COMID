@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "ff_family": "water_tip3p",
+  "charge_model": "tip3p_fixed",
+  "mol_id": "H2O",
+  "generator": "manual_tip3p",
+  "generator_version": "1.0",
+  "provenance": "Jorgensen et al. J. Chem. Phys. 1983, 79, 926",
+  "canonical_smiles": "O",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "O",
+      "ff_type": "OW",
+      "charge": -0.834,
+      "epsilon": 0.1521,
+      "sigma": 3.1507
+    },
+    {
+      "index": 2,
+      "element": "H",
+      "ff_type": "HW",
+      "charge": 0.417,
+      "epsilon": 0.0,
+      "sigma": 0.0
+    },
+    {
+      "index": 3,
+      "element": "H",
+      "ff_type": "HW",
+      "charge": 0.417,
+      "epsilon": 0.0,
+      "sigma": 0.0
+    }
+  ],
+  "bond_types": [
+    {"key": "OW-HW", "k": 450.0, "r0": 0.9572}
+  ],
+  "angle_types": [
+    {"key": "HW-OW-HW", "k": 55.0, "theta0": 104.52}
+  ],
+  "dihedral_types": [],
+  "improper_types": [],
+  "improper_instances": []
+}

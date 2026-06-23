@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "ff_family": "ionic_jc_tip3p",
+  "charge_model": "formal+am1bcc",
+  "mol_id": "NaOH",
+  "generator": "tleap_hybrid",
+  "generator_version": "ambertools_parmed",
+  "provenance": "Hybrid: Na+ (JC 2008) + OH- (GAFF2 oh/ho) via leaprc.gaff2 + leaprc.water.tip3p",
+  "canonical_smiles": "[Na+].[OH-]",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": -0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "O",
+      "ff_type": "oh",
+      "charge": -1.322,
+      "sigma": 3.242871,
+      "epsilon": 0.093
+    },
+    {
+      "index": 2,
+      "element": "H",
+      "ff_type": "ho",
+      "charge": 0.322,
+      "sigma": 0.537925,
+      "epsilon": 0.0047
+    },
+    {
+      "index": 3,
+      "element": "Na",
+      "ff_type": "Na+",
+      "charge": 1.0,
+      "sigma": 2.439281,
+      "epsilon": 0.087439
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "oh-ho",
+      "k": 535.5,
+      "r0": 0.9725
+    }
+  ],
+  "angle_types": [],
+  "dihedral_types": [],
+  "improper_types": []
+}

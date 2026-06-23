@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "mol_id": "S-AS-Phenol-0293",
+  "entries": [
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 213.0,
+      "e_intra": 544.4399913,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 233.0,
+      "e_intra": 549.9453383,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 253.0,
+      "e_intra": 554.7567644000001,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 273.0,
+      "e_intra": 560.68424055,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 293.0,
+      "e_intra": 566.5700204,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 313.0,
+      "e_intra": 571.9714973499999,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 333.0,
+      "e_intra": 578.4833653999999,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 353.0,
+      "e_intra": 584.2924219,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 373.0,
+      "e_intra": 589.3317217,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 393.0,
+      "e_intra": 596.01079165,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 413.0,
+      "e_intra": 600.02419715,
+      "n_samples": null,
+      "averaging_window_ps": null
+    },
+    {
+      "ff_name": "GAFF2",
+      "ff_version": "2.11",
+      "method": "single_molecule_vacuum",
+      "temperature_K": 433.0,
+      "e_intra": 605.65755755,
+      "n_samples": null,
+      "averaging_window_ps": null
+    }
+  ]
+}

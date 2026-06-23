@@ -1,0 +1,13 @@
+# NVT equilibration: {{ name }}
+timestep {{ timestep_fs }}
+fix {{ fix_id }} {{ thermo_group | default('all') }} nvt temp {{ temp }} {{ temp }} {{ tdamp }}
+
+thermo {{ thermo_interval }}
+thermo_style custom step temp pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong
+thermo_modify flush yes
+dump d_{{ step_index }} all custom {{ dump_interval }} dump_{{ name }}.lammpstrj id type xu yu zu x y z vx vy vz
+
+run {{ nsteps }}
+unfix {{ fix_id }}
+undump d_{{ step_index }}
+write_restart restart.{{ name }}

@@ -1,0 +1,421 @@
+# E2E Regression Test Cases for LLM Agent System
+# Version: v00.60.00
+# Total: 30 cases in 6 groups
+
+metadata:
+  version: "1.0"
+  created_at: "2026-01-28"
+  description: "Regression test cases for LLM Agent dual-debate system"
+
+# Acceptance criteria for all tests:
+acceptance_criteria:
+  score_delta: 0.03      # Max allowed score deviation from baseline
+  priority_delta: 0.05   # Max allowed priority deviation
+  rounds_used_delta: 1   # Max allowed rounds deviation
+  gates_must_match: true # Gate pass/fail must be identical
+
+# ===========================================================================
+# G1: Composition Recommendation Cases (5 cases)
+# ===========================================================================
+g1_composition_recommendation:
+  - case_id: "G1-01"
+    name: "Standard density target"
+    description: "Recommend composition for density = 1.02 g/cm3"
+    input:
+      goal: "Find composition with density 1.02 g/cm3"
+      target_properties:
+        density: 1.02
+      constraints:
+        temperature_K: 298
+    expected:
+      consensus_reached: true
+      min_rounds: 2
+      max_rounds: 4
+      physical_score_min: 0.75
+      composition_bounds:
+        asphaltene: [5, 25]
+        resin: [20, 45]
+        aromatic: [20, 50]
+        saturate: [10, 30]
+
+  - case_id: "G1-02"
+    name: "High viscosity target with SBS additive"
+    description: "Recommend composition for viscosity > 5000 mPa.s with SBS modifier"
+    input:
+      goal: "Find composition with viscosity > 5000 mPa.s using SBS additive"
+      target_properties:
+        viscosity: 5000
+      constraints:
+        additives: ["SBS"]
+        additive_max_wt: 5.0
+    expected:
+      consensus_reached: true
+      physical_score_min: 0.70
+      has_additive: true
+
+  - case_id: "G1-03"
+    name: "Low CED target"
+    description: "Recommend composition for CED < 350 MJ/m3"
+    input:
+      goal: "Find composition with CED below 350 MJ/m3"
+      target_properties:
+        ced: 350
+      constraints: {}
+    expected:
+      consensus_reached: true
+      physical_score_min: 0.75
+
+  - case_id: "G1-04"
+    name: "Multi-property optimization"
+    description: "Balance density and CED together"
+    input:
+      goal: "Optimize for density 1.00 g/cm3 and CED 400 MJ/m3"
+      target_properties:
+        density: 1.00
+        ced: 400
+      constraints: {}
+    expected:
+      consensus_reached: true
+      min_rounds: 3
+
+  - case_id: "G1-05"
+    name: "High asphaltene constraint"
+    description: "Recommend composition with high asphaltene content"
+    input:
+      goal: "Find composition with 25% asphaltene and density 1.05 g/cm3"
+      target_properties:
+        density: 1.05
+      constraints:
+        asphaltene_min: 23
+        asphaltene_max: 27
+    expected:
+      consensus_reached: true
+      composition_bounds:
+        asphaltene: [23, 27]
+      validity_tag: "high_asphaltene_sensitive"
+
+# ===========================================================================
+# G2: Literature Validation Cases (5 cases)
+# ===========================================================================
+g2_literature_validation:
+  - case_id: "G2-01"
+    name: "Zero DOI scenario"
+    description: "Force literature gap with no DOI references"
+    input:
+      goal: "Validate composition for novel additive without literature"
+      composition:
+        saturate: 15
+        aromatic: 40
+        resin: 30
+        asphaltene: 15
+      property_name: "novel_property"
+      mock_doi_count: 0
+    expected:
+      literature_pass: false
+      doi_count: 0
+      priority_level: "critical"
+
+  - case_id: "G2-02"
+    name: "High unknown rate"
+    description: "Trigger unknown rate > 0.40 threshold"
+    input:
+      goal: "Validate predictions with uncertain literature"
+      mock_validation_results:
+        pass: 2
+        fail: 1
+        unknown: 5
+    expected:
+      literature_pass: false
+      unknown_rate_min: 0.40
+      priority_level: "critical"
+
+  - case_id: "G2-03"
+    name: "Successful literature validation"
+    description: "Validate with good DOI support"
+    input:
+      goal: "Validate density prediction with literature"
+      property_name: "density"
+      predicted_value: 1.02
+      mock_doi_count: 3
+      mock_validation_status: "pass"
+    expected:
+      literature_pass: true
+      doi_count_min: 2
+
+  - case_id: "G2-04"
+    name: "Literature value mismatch"
+    description: "Prediction outside literature range"
+    input:
+      goal: "Validate outlier density prediction"
+      property_name: "density"
+      predicted_value: 1.25
+      mock_literature_range: [0.95, 1.10]
+    expected:
+      literature_pass: false
+      validation_status: "fail"
+
+  - case_id: "G2-05"
+    name: "Partial literature support"
+    description: "Some properties validated, some unknown"
+    input:
+      goal: "Validate multi-property prediction"
+      properties:
+        density: {value: 1.02, mock_status: "pass"}
+        ced: {value: 400, mock_status: "unknown"}
+    expected:
+      literature_pass: false
+      validation_status: "partial"
+
+# ===========================================================================
+# G3: Scenario Planning Cases (5 cases)
+# ===========================================================================
+g3_scenario_planning:
+  - case_id: "G3-01"
+    name: "GPU budget constraint"
+    description: "Plan scenarios within 10 GPU hour budget"
+    input:
+      goal: "Plan experiments within 10 GPU hours"
+      goals:
+        - {composition: {saturate: 15, aromatic: 45, resin: 30, asphaltene: 10}, target_properties: {density: 1.0}}
+        - {composition: {saturate: 20, aromatic: 40, resin: 25, asphaltene: 15}, target_properties: {density: 1.02}}
+        - {composition: {saturate: 10, aromatic: 45, resin: 25, asphaltene: 20}, target_properties: {density: 1.05}}
+      gpu_budget: 10.0
+    expected:
+      total_gpu_hours_max: 10.0
+      scenario_count_min: 2
+
+  - case_id: "G3-02"
+    name: "Priority ordering"
+    description: "Verify priority scoring order"
+    input:
+      goal: "Rank scenarios by VoI priority"
+      scenarios:
+        - {current_samples: 0, additional_samples: 5, impact: 0.9, gpu_hours: 1.0}
+        - {current_samples: 10, additional_samples: 3, impact: 0.5, gpu_hours: 1.0}
+        - {current_samples: 5, additional_samples: 5, impact: 0.7, gpu_hours: 2.0}
+    expected:
+      priority_order: [0, 2, 1]  # Indices of scenarios in priority order
+
+  - case_id: "G3-03"
+    name: "Literature gap priority"
+    description: "Literature gap gets critical priority"
+    input:
+      goal: "Handle literature gap scenario"
+      literature_gap:
+        property_name: "viscosity"
+        unknown_rate: 0.50
+        doi_count: 0
+    expected:
+      priority_level: "critical"
+      priority_score_min: 0.9
+
+  - case_id: "G3-04"
+    name: "VoI calculation"
+    description: "Verify uncertainty reduction calculation"
+    input:
+      goal: "Calculate VoI for sample addition"
+      current_samples: 9
+      additional_samples: 3
+    expected:
+      delta_uncertainty_approx: 0.134
+      delta_uncertainty_tolerance: 0.01
+
+  - case_id: "G3-05"
+    name: "Coverage improvement"
+    description: "Scenarios should improve coverage"
+    input:
+      goal: "Improve composition space coverage"
+      current_experiments: []
+      target_coverage_improvement: 0.1
+    expected:
+      scenario_count_min: 3
+      has_coverage_analysis: true
+
+# ===========================================================================
+# G4: Uncertainty Reduction Cases (5 cases)
+# ===========================================================================
+g4_uncertainty_reduction:
+  - case_id: "G4-01"
+    name: "Low sample count boost"
+    description: "Zero samples get high priority"
+    input:
+      goal: "Prioritize under-sampled region"
+      property_name: "density"
+      current_samples: 0
+      additional_samples: 5
+    expected:
+      delta_uncertainty_min: 0.5
+      priority_score_min: 0.7
+
+  - case_id: "G4-02"
+    name: "Diminishing returns"
+    description: "High sample count has low priority"
+    input:
+      goal: "Evaluate well-sampled region"
+      property_name: "density"
+      current_samples: 100
+      additional_samples: 5
+    expected:
+      delta_uncertainty_max: 0.05
+      priority_score_max: 0.5
+
+  - case_id: "G4-03"
+    name: "Multi-property uncertainty"
+    description: "Combined uncertainty from multiple properties"
+    input:
+      goal: "Reduce uncertainty across properties"
+      properties:
+        density: {n_samples: 5, m_additional: 3, weight: 1.0}
+        ced: {n_samples: 2, m_additional: 3, weight: 0.9}
+        viscosity: {n_samples: 0, m_additional: 3, weight: 0.8}
+    expected:
+      weighted_uncertainty_min: 0.3
+
+  - case_id: "G4-04"
+    name: "Cost vs uncertainty trade-off"
+    description: "Balance uncertainty reduction with GPU cost"
+    input:
+      goal: "Optimize uncertainty/cost ratio"
+      scenarios:
+        - {delta_unc: 0.5, gpu_hours: 1.0}
+        - {delta_unc: 0.3, gpu_hours: 0.5}
+        - {delta_unc: 0.2, gpu_hours: 5.0}
+    expected:
+      best_scenario_index: 1  # Middle one has best ratio
+
+  - case_id: "G4-05"
+    name: "Target uncertainty threshold"
+    description: "Stop when uncertainty below threshold"
+    input:
+      goal: "Reduce uncertainty below 0.1"
+      current_samples: 20
+      target_uncertainty: 0.1
+    expected:
+      additional_samples_needed_max: 10
+
+# ===========================================================================
+# G5: Consensus Failure Cases (5 cases)
+# ===========================================================================
+g5_consensus_failure:
+  - case_id: "G5-01"
+    name: "Physical gate failure"
+    description: "Trigger physical plausibility gate failure"
+    input:
+      goal: "Propose impossible composition"
+      mock_physical_score: 0.5
+      composition:
+        saturate: 50
+        aromatic: 50
+        resin: 0
+        asphaltene: 0
+    expected:
+      consensus_reached: false
+      physical_pass: false
+      has_alternatives: true
+      alternative_count: 2
+
+  - case_id: "G5-02"
+    name: "Literature gate failure"
+    description: "Trigger literature support gate failure"
+    input:
+      goal: "Propose without literature support"
+      mock_literature_score: 0.5
+      mock_doi_count: 0
+    expected:
+      consensus_reached: false
+      literature_pass: false
+      has_alternatives: true
+
+  - case_id: "G5-03"
+    name: "High fail rate"
+    description: "Trigger fail rate gate failure"
+    input:
+      goal: "Test with high simulation failure rate"
+      mock_fail_rate: 0.30
+    expected:
+      consensus_reached: false
+      fail_rate_pass: false
+
+  - case_id: "G5-04"
+    name: "Max rounds exhausted"
+    description: "Reach max rounds without consensus"
+    input:
+      goal: "Difficult optimization problem"
+      mock_convergence: false
+      max_rounds: 5
+    expected:
+      consensus_reached: false
+      rounds_used: 5
+      exit_reason: "max_rounds"
+
+  - case_id: "G5-05"
+    name: "Composition distance failure"
+    description: "Trigger composition L1 gate failure"
+    input:
+      goal: "Proposal far from target"
+      target_composition:
+        saturate: 20
+        aromatic: 40
+        resin: 25
+        asphaltene: 15
+      mock_proposed_composition:
+        saturate: 10
+        aromatic: 55
+        resin: 20
+        asphaltene: 15
+    expected:
+      consensus_reached: false
+      composition_l1_pass: false
+
+# ===========================================================================
+# G6: Security/Redaction Cases (5 cases)
+# ===========================================================================
+g6_security_redaction:
+  - case_id: "G6-01"
+    name: "API key redaction"
+    description: "Verify API keys are redacted"
+    input:
+      content: "Use API key sk-1234567890abcdefghijklmnopqrstuvwxyz for access"
+    expected:
+      redaction_applied: true
+      original_not_in_output: "sk-1234567890"
+      rule_applied: "openai_api_key"
+
+  - case_id: "G6-02"
+    name: "Email redaction"
+    description: "Verify emails are redacted"
+    input:
+      content: "Contact user@example.com for details"
+    expected:
+      redaction_applied: true
+      original_not_in_output: "user@example.com"
+      rule_applied: "email"
+
+  - case_id: "G6-03"
+    name: "Path anonymization"
+    description: "Verify home paths are anonymized"
+    input:
+      content: "File at /home/username/secret/data.txt"
+    expected:
+      redaction_applied: true
+      output_contains: "/home/<USER>/"
+      rule_applied: "home_path"
+
+  - case_id: "G6-04"
+    name: "Secret token redaction"
+    description: "Verify secret tokens are redacted"
+    input:
+      content: "Set secret=my_super_secret_token_123"
+    expected:
+      redaction_applied: true
+      rule_applied: "secret_assignment"
+
+  - case_id: "G6-05"
+    name: "Multiple redactions"
+    description: "Handle multiple sensitive items"
+    input:
+      content: "Email admin@test.com with key sk-abcdefghijklmnopqrstuvwxyz at /home/user/config"
+    expected:
+      redaction_applied: true
+      rules_applied_count: 3
+      violation_count: 0

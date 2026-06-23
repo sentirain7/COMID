@@ -1,0 +1,6 @@
+# Energy minimization: {{ name }}
+thermo {{ thermo_interval }}
+thermo_style custom step pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong
+thermo_modify flush yes
+minimize {{ etol }} {{ ftol }} {{ max_iter }} {{ max_eval }}
+reset_timestep 0

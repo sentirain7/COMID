@@ -1,0 +1,162 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "Urea",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from Urea.mol",
+  "canonical_smiles": "NC(=O)N",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": -0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "c",
+      "charge": 0.7271,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 2,
+      "element": "O",
+      "ff_type": "o",
+      "charge": -0.6391,
+      "epsilon": 0.1463,
+      "sigma": 3.048121
+    },
+    {
+      "index": 3,
+      "element": "N",
+      "ff_type": "nt",
+      "charge": -0.642,
+      "epsilon": 0.0851,
+      "sigma": 3.359045
+    },
+    {
+      "index": 4,
+      "element": "N",
+      "ff_type": "nt",
+      "charge": -0.642,
+      "epsilon": 0.0851,
+      "sigma": 3.359045
+    },
+    {
+      "index": 5,
+      "element": "H",
+      "ff_type": "hn",
+      "charge": 0.299,
+      "epsilon": 0.01,
+      "sigma": 1.106496
+    },
+    {
+      "index": 6,
+      "element": "H",
+      "ff_type": "hn",
+      "charge": 0.299,
+      "epsilon": 0.01,
+      "sigma": 1.106496
+    },
+    {
+      "index": 7,
+      "element": "H",
+      "ff_type": "hn",
+      "charge": 0.299,
+      "epsilon": 0.01,
+      "sigma": 1.106496
+    },
+    {
+      "index": 8,
+      "element": "H",
+      "ff_type": "hn",
+      "charge": 0.299,
+      "epsilon": 0.01,
+      "sigma": 1.106496
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "c-o",
+      "k": 590.6,
+      "r0": 1.219
+    },
+    {
+      "key": "c-nt",
+      "k": 350.5,
+      "r0": 1.3675
+    },
+    {
+      "key": "nt-hn",
+      "k": 479.5,
+      "r0": 1.0105
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "o-c-nt",
+      "k": 87.74,
+      "theta0": 122.98
+    },
+    {
+      "key": "nt-c-nt",
+      "k": 74.63,
+      "theta0": 116.06
+    },
+    {
+      "key": "c-nt-hn",
+      "k": 57.55,
+      "theta0": 118.44
+    },
+    {
+      "key": "hn-nt-hn",
+      "k": 45.87,
+      "theta0": 117.95
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "nt-nt-c-o",
+      "style": "fourier",
+      "coeffs": [
+        10.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "hn-nt-c-o",
+      "style": "fourier",
+      "coeffs": [
+        2.0,
+        1.0,
+        1.0,
+        2.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "hn-nt-c-nt",
+      "style": "fourier",
+      "coeffs": [
+        2.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "c-hn-nt-hn",
+      "style": "fourier",
+      "coeffs": [
+        1.1,
+        1.0,
+        2.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

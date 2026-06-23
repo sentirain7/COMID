@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "AceticAcid",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from AceticAcid.mol",
+  "canonical_smiles": "CC(=O)O",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": -0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.1491,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 2,
+      "element": "C",
+      "ff_type": "c",
+      "charge": 0.6341,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 3,
+      "element": "O",
+      "ff_type": "o",
+      "charge": -0.55,
+      "epsilon": 0.1463,
+      "sigma": 3.048121
+    },
+    {
+      "index": 4,
+      "element": "O",
+      "ff_type": "oh",
+      "charge": -0.6121,
+      "epsilon": 0.093,
+      "sigma": 3.242871
+    },
+    {
+      "index": 5,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0777,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 6,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0777,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 7,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0777,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 8,
+      "element": "H",
+      "ff_type": "ho",
+      "charge": 0.444,
+      "epsilon": 0.0047,
+      "sigma": 0.537925
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "c3-c",
+      "k": 234.8,
+      "r0": 1.527
+    },
+    {
+      "key": "c-o",
+      "k": 590.6,
+      "r0": 1.219
+    },
+    {
+      "key": "c-oh",
+      "k": 359.3,
+      "r0": 1.3556
+    },
+    {
+      "key": "c3-hc",
+      "k": 345.2,
+      "r0": 1.0962
+    },
+    {
+      "key": "oh-ho",
+      "k": 535.5,
+      "r0": 0.9725
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "c3-c-o",
+      "k": 76.45,
+      "theta0": 122.9
+    },
+    {
+      "key": "c3-c-oh",
+      "k": 77.42,
+      "theta0": 112.74
+    },
+    {
+      "key": "o-c-oh",
+      "k": 102.03,
+      "theta0": 122.09
+    },
+    {
+      "key": "c-c3-hc",
+      "k": 43.63,
+      "theta0": 108.95
+    },
+    {
+      "key": "c-oh-ho",
+      "k": 68.46,
+      "theta0": 106.54
+    },
+    {
+      "key": "hc-c3-hc",
+      "k": 35.8,
+      "theta0": 107.73
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "c3-o-c-oh",
+      "style": "fourier",
+      "coeffs": [
+        1.1,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "c3-c-oh-ho",
+      "style": "fourier",
+      "coeffs": [
+        1.8,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "hc-c3-c-o",
+      "style": "fourier",
+      "coeffs": [
+        4.03,
+        1.0,
+        1.0,
+        3.66,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ho-oh-c-o",
+      "style": "fourier",
+      "coeffs": [
+        1.9,
+        1.0,
+        1.0,
+        2.3,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "hc-c3-c-oh",
+      "style": "fourier",
+      "coeffs": [
+        0.0,
+        1.0,
+        2.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

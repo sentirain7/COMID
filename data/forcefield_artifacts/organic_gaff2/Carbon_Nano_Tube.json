@@ -1,0 +1,717 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "Carbon_Nano_Tube",
+  "generator": "fragment_fallback_gaff2",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "fragment_fallback",
+  "provenance": "Generated from Carbon_Nano_Tube.mol",
+  "canonical_smiles": "",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 2,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 3,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 4,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 5,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 6,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 7,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 8,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 9,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 10,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 11,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 12,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 13,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 14,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 15,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 16,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 17,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 18,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 19,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 20,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 21,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 22,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 23,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 24,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 25,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 26,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 27,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 28,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 29,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 30,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 31,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 32,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 33,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 34,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 35,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 36,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 37,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 38,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 39,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 40,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 41,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 42,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 43,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 44,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 45,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 46,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 47,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 48,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 49,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 50,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 51,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 52,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 53,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 54,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 55,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 56,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 57,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 58,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 59,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 60,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.195,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 61,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 62,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 63,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 64,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 65,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 66,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 67,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 68,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 69,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 70,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 71,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 72,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 73,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 74,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 75,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 76,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 77,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 78,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 79,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 80,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.065,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "ca-ca",
+      "k": 354.2,
+      "r0": 1.3986
+    },
+    {
+      "key": "ca-ha",
+      "k": 360.7,
+      "r0": 1.086
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "ca-ca-ca",
+      "k": 63.67,
+      "theta0": 120.02
+    },
+    {
+      "key": "ca-ca-ha",
+      "k": 44.9,
+      "theta0": 119.88
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "ca-ca-ca-ca",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0,
+        1.1,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-ca-ca-ha",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0,
+        1.1,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ha-ca-ca-ha",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

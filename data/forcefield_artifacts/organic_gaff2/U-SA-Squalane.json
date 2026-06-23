@@ -1,0 +1,812 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "U-SA-Squalane",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from U-SA-Squalane.mol",
+  "canonical_smiles": null,
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.08935,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 2,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0667,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 3,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0749,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 4,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0794,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 5,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0764,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 6,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0642,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 7,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0749,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 8,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0789,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 9,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0769,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 10,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0662,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 11,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0759,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 12,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0794,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 13,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0794,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 14,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0759,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 15,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0662,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 16,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0769,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 17,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0789,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 18,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0749,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 19,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0642,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 20,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0764,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 21,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0794,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 22,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0749,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 23,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0667,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 24,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.08935,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 25,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.093604,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 26,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0896,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 27,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0896,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 28,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0896,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 29,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.08935,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 30,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.08935,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 31,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 32,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 33,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 34,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0437,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 35,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0387,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 36,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0387,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 37,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.04095,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 38,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.04095,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 39,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 40,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 41,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0457,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 42,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03945,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 43,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03945,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 44,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.04095,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 45,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.04095,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 46,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 47,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 48,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0482,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 49,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03995,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 50,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03995,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 51,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 52,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 53,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 54,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 55,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03995,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 56,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03995,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 57,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0482,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 58,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 59,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 60,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.04095,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 61,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.04095,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 62,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03945,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 63,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03945,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 64,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0457,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 65,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 66,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 67,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.04095,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 68,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.04095,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 69,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0387,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 70,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0387,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 71,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0437,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 72,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 73,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 74,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 75,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 76,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 77,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 78,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 79,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 80,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 81,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 82,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 83,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 84,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 85,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 86,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 87,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 88,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 89,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 90,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 91,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 92,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033117,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "c3-c3",
+      "k": 228.9,
+      "r0": 1.5354
+    },
+    {
+      "key": "c3-hc",
+      "k": 345.2,
+      "r0": 1.0962
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "c3-c3-c3",
+      "k": 59.87,
+      "theta0": 112.63
+    },
+    {
+      "key": "c3-c3-hc",
+      "k": 43.27,
+      "theta0": 109.68
+    },
+    {
+      "key": "hc-c3-hc",
+      "k": 35.8,
+      "theta0": 107.73
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "c3-c3-c3-c3",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c3-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "hc-c3-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.12,
+        1.0,
+        3.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

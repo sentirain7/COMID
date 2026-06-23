@@ -1,0 +1,177 @@
+# Force Field Registry - SSOT for all force field configurations
+# This file is the single source of truth for force field parameters.
+#
+# Primary organic FF: GAFF2 (General AMBER Force Field 2)
+# Mixing rule: arithmetic (Lorentz-Berthelot) for bulk and layered studies.
+# Layered builds (LAYER_BULKFF) use the same arithmetic mixing for
+# organic-inorganic interfaces via the protocol layer override.
+
+default: bulk_ff_gaff2
+
+forcefields:
+  # ==========================================================================
+  # GAFF2: General AMBER Force Field 2 for Organic Molecules (Primary)
+  # ==========================================================================
+  bulk_ff_gaff2:
+    name: "GAFF2"
+    display_label: "GAFF2"
+    version: "2.11"
+    description: "General AMBER Force Field 2 — primary organic FF for construction materials"
+    pair_style: "lj/cut/coul/long"
+    pair_cutoff: 12.0
+    kspace_style: "pppm 1.0e-4"
+    special_bonds: "lj 0.0 0.0 0.5 coul 0.0 0.0 0.8333"
+    enabled: true
+    # element_fallback_source removed (fail-closed policy v00.99.29)
+    # All LJ params must come from explicit artifacts
+    # Runtime FF profile
+    dihedral_style: "fourier"
+    improper_style: "cvff"
+    special_bonds_lj: [0.0, 0.0, 0.5]
+    special_bonds_coul: [0.0, 0.0, 0.8333]
+    native_mixing_rule: "arithmetic"
+    charge_provenance: "am1_bcc"
+    artifact_family: "organic_gaff2"
+    allowed_study_types: ["bulk", "layer_bulkff", "single_molecule_vacuum"]
+    mixing_rules:
+      type: "arithmetic"
+      epsilon: "arithmetic"
+      sigma: "arithmetic"
+
+  # ==========================================================================
+  # ReaxFF: Reactive Force Field (validation only)
+  # ==========================================================================
+  reaxff:
+    name: "ReaxFF"
+    version: "CHO"
+    description: "Reactive force field for validation (requires special setup)"
+    pair_style: "reaxff"
+    pair_cutoff: 10.0
+    enabled: false  # Disabled by default - requires ffield file
+
+    # ReaxFF doesn't use traditional atom types - uses element-based parameters
+    # The actual parameters are in the ffield file
+    atom_types:
+      C:
+        mass: 12.011
+        element: C
+        description: "Carbon"
+      H:
+        mass: 1.008
+        element: H
+        description: "Hydrogen"
+      O:
+        mass: 15.999
+        element: O
+        description: "Oxygen"
+      N:
+        mass: 14.007
+        element: N
+        description: "Nitrogen"
+      S:
+        mass: 32.065
+        element: S
+        description: "Sulfur"
+      Na:
+        mass: 22.990
+        element: Na
+        description: "Sodium"
+      Cl:
+        mass: 35.453
+        element: Cl
+        description: "Chlorine"
+
+    # Note: ReaxFF uses QEq for charges, not fixed values
+    # Bond/angle/dihedral parameters are in ffield file
+
+  # ==========================================================================
+  # TraPPE-UA: United-Atom Force Field
+  # ==========================================================================
+  trappe-ua:
+    name: "TraPPE-UA"
+    version: "1.0"
+    description: "Transferable Potentials for Phase Equilibria - United Atom"
+    pair_style: "lj/cut"
+    pair_cutoff: 14.0
+    enabled: false  # Not yet fully parameterized
+
+    atom_types:
+      CH3:
+        mass: 15.035
+        element: C
+        description: "Methyl group (united atom)"
+      CH2:
+        mass: 14.027
+        element: C
+        description: "Methylene group (united atom)"
+      CH:
+        mass: 13.019
+        element: C
+        description: "Methine group (united atom)"
+
+    pair_coeffs:
+      CH3:
+        epsilon: 0.1947
+        sigma: 3.75
+        charge: 0.0
+      CH2:
+        epsilon: 0.0910
+        sigma: 3.95
+        charge: 0.0
+      CH:
+        epsilon: 0.0200
+        sigma: 4.68
+        charge: 0.0
+
+# Molecule-specific atom type assignments (for automatic typing)
+molecule_type_mapping:
+  # Saturates
+  hexadecane:
+    terminal_C: CT
+    chain_C: CT
+    H: HC
+  docosane:
+    terminal_C: CT
+    chain_C: CT
+    H: HC
+  squalane:
+    terminal_C: CT
+    chain_C: CT
+    branch_C: CT
+    H: HC
+
+  # Aromatics
+  naphthalene:
+    C: CA
+    H: HA
+  phenanthrene:
+    C: CA
+    H: HA
+  pyrene:
+    C: CA
+    H: HA
+  anthracene:
+    C: CA
+    H: HA
+
+  # Resins
+  benzothiophene:
+    C: CA
+    S: S
+    H: HA
+  carbazole:
+    C: CA
+    N: NA
+    H: HA
+  dibenzothiophene:
+    C: CA
+    S: S
+    H: HA
+
+  # Asphaltenes
+  coronene:
+    C: CA
+    H: HA
+  ovalene:
+    C: CA
+    H: HA

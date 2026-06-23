@@ -1,0 +1,508 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "U-RE-Benzo",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from U-RE-Benzo.mol",
+  "canonical_smiles": null,
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.132,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 2,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.089,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 3,
+      "element": "C",
+      "ff_type": "cp",
+      "charge": -0.054,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 4,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.0411,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 5,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.102,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 6,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.116,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 7,
+      "element": "S",
+      "ff_type": "ss",
+      "charge": -0.0068,
+      "epsilon": 0.2824,
+      "sigma": 3.532413
+    },
+    {
+      "index": 8,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.0471,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 9,
+      "element": "C",
+      "ff_type": "cp",
+      "charge": -0.039,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 10,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.063,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 11,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.0471,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 12,
+      "element": "C",
+      "ff_type": "cp",
+      "charge": -0.039,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 13,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.063,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 14,
+      "element": "C",
+      "ff_type": "cp",
+      "charge": -0.054,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 15,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.0411,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 16,
+      "element": "S",
+      "ff_type": "ss",
+      "charge": -0.0068,
+      "epsilon": 0.2824,
+      "sigma": 3.532413
+    },
+    {
+      "index": 17,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.102,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 18,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.116,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 19,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.134,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 20,
+      "element": "C",
+      "ff_type": "ca",
+      "charge": -0.089,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 21,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.135,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 22,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.137,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 23,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.14,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 24,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.135,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 25,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.144,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 26,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.14,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 27,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.135,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 28,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.135,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 29,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.137,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    },
+    {
+      "index": 30,
+      "element": "H",
+      "ff_type": "ha",
+      "charge": 0.144,
+      "epsilon": 0.0161,
+      "sigma": 2.625479
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "ca-ca",
+      "k": 354.2,
+      "r0": 1.3986
+    },
+    {
+      "key": "ca-cp",
+      "k": 346.1,
+      "r0": 1.4056
+    },
+    {
+      "key": "cp-cp",
+      "k": 269.4,
+      "r0": 1.4829
+    },
+    {
+      "key": "ca-ss",
+      "k": 213.5,
+      "r0": 1.7847
+    },
+    {
+      "key": "ca-ha",
+      "k": 360.7,
+      "r0": 1.086
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "ca-ca-cp",
+      "k": 63.33,
+      "theta0": 120.73
+    },
+    {
+      "key": "ca-ca-ca",
+      "k": 63.67,
+      "theta0": 120.02
+    },
+    {
+      "key": "ca-cp-ca",
+      "k": 63.79,
+      "theta0": 118.41
+    },
+    {
+      "key": "ca-cp-cp",
+      "k": 61.3,
+      "theta0": 121.1
+    },
+    {
+      "key": "cp-ca-ss",
+      "k": 65.74,
+      "theta0": 110.38
+    },
+    {
+      "key": "ca-ss-ca",
+      "k": 95.93,
+      "theta0": 98.92
+    },
+    {
+      "key": "ca-ca-ss",
+      "k": 63.09,
+      "theta0": 120.06
+    },
+    {
+      "key": "ca-ca-ha",
+      "k": 44.9,
+      "theta0": 119.88
+    },
+    {
+      "key": "cp-ca-ha",
+      "k": 44.73,
+      "theta0": 119.82
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "ca-ca-cp-ca",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-ca-cp-cp",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0,
+        1.1,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-ca-ca-ca",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-cp-ca-ss",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0,
+        1.1,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-cp-cp-ca",
+      "style": "fourier",
+      "coeffs": [
+        0.765,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-ca-ca-cp",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-ss-ca-cp",
+      "style": "fourier",
+      "coeffs": [
+        0.4,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "cp-cp-ca-ss",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-ca-ss-ca",
+      "style": "fourier",
+      "coeffs": [
+        0.4,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-ca-ca-ss",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "cp-ca-ca-ss",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "cp-ca-ca-cp",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-ca-ca-ha",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0,
+        1.1,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "cp-ca-ca-ha",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "cp-cp-ca-ha",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ca-cp-ca-ha",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0,
+        1.1,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ha-ca-ca-ss",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "ha-ca-ca-ha",
+      "style": "fourier",
+      "coeffs": [
+        3.625,
+        1.0,
+        2.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

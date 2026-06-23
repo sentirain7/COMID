@@ -1,0 +1,315 @@
+library:
+  name: single_moles
+  version: '1.1'
+  description: Single non-binder molecule catalog for interface studies (SSOT)
+  file_format: mol
+directory: single_moles
+molecules:
+# === Atmospheric / Environmental ===
+# Note on ff_assignment routing (Wave 0 SSOT):
+# - Small organic molecules (water, fuel, alcohols, organic acids) → organic_rdkit_legacy
+# - Ionic salts and strong electrolytes → ionic_profile (currently blocked_placeholder
+#   until Wave 3 curates a literature-backed ionic profile; this prevents silent
+#   misrouting through the RDKit/MMFF94 organic path which is meaningless for ions).
+- base_id: H2O
+  name: Water
+  paper_name: H2O
+  category: atmospheric
+  sara: aromatic
+  atom_count: 3
+  molecular_weight: 18.015
+  recommended_density: 1.0
+  available_aging: []
+  structure_file: single_moles/H2O.mol
+  ff_assignment:
+    route: water_model
+    status: active
+    source_id: H2O
+    formal_charge: 0
+    canonical_smiles: O
+- base_id: O2
+  name: Oxygen
+  paper_name: O2
+  category: atmospheric
+  sara: aromatic
+  atom_count: 2
+  molecular_weight: 31.998
+  recommended_density: 0.5
+  available_aging: []
+  structure_file: single_moles/O2.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: O2
+    formal_charge: 0
+    canonical_smiles: O=O
+- base_id: CO2
+  name: Carbon Dioxide
+  paper_name: CO2
+  category: atmospheric
+  sara: aromatic
+  atom_count: 3
+  molecular_weight: 44.01
+  recommended_density: 0.5
+  available_aging: []
+  structure_file: single_moles/CO2.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: CO2
+    formal_charge: 0
+    canonical_smiles: O=C=O
+- base_id: O3
+  name: Ozone
+  paper_name: O3
+  category: atmospheric
+  sara: aromatic
+  atom_count: 3
+  molecular_weight: 48.00
+  recommended_density: 0.5
+  available_aging: []
+  structure_file: single_moles/O3.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: O3
+    formal_charge: 0
+    canonical_smiles: null
+# === Deicing / Salt — IONIC, blocked until Wave 3 curated ionic profile ===
+- base_id: NaCl
+  name: Sodium Chloride
+  paper_name: NaCl
+  category: deicing
+  sara: resin
+  atom_count: 2
+  molecular_weight: 58.44
+  recommended_density: 1.40
+  available_aging: []
+  structure_file: single_moles/NaCl.mol
+  ff_assignment:
+    route: ionic_profile
+    status: active
+    source_id: NaCl
+    profile_id: joung_cheatham_nacl_v1
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: CaCl2
+  name: Calcium Chloride
+  paper_name: CaCl2
+  category: deicing
+  sara: resin
+  atom_count: 3
+  molecular_weight: 110.98
+  recommended_density: 1.40
+  available_aging: []
+  structure_file: single_moles/CaCl2.mol
+  ff_assignment:
+    route: ionic_profile
+    status: active
+    source_id: CaCl2
+    profile_id: joung_cheatham_cacl2_v1
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: MgCl2
+  name: Magnesium Chloride
+  paper_name: MgCl2
+  category: deicing
+  sara: resin
+  atom_count: 3
+  molecular_weight: 95.21
+  recommended_density: 1.50
+  available_aging: []
+  structure_file: single_moles/MgCl2.mol
+  ff_assignment:
+    route: ionic_profile
+    status: active
+    source_id: MgCl2
+    profile_id: joung_cheatham_cacl2_v1
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: KCl
+  name: Potassium Chloride
+  paper_name: KCl
+  category: deicing
+  sara: resin
+  atom_count: 2
+  molecular_weight: 74.55
+  recommended_density: 1.30
+  available_aging: []
+  structure_file: single_moles/KCl.mol
+  ff_assignment:
+    route: ionic_profile
+    status: active
+    source_id: KCl
+    profile_id: joung_cheatham_nacl_v1
+    formal_charge: 0
+    canonical_smiles: null
+# NaOH: hybrid ionic/covalent (O-H bond) — needs special treatment beyond
+# pure ionic JC parameters. Blocked until dedicated parameterization.
+- base_id: NaOH
+  name: Sodium Hydroxide
+  paper_name: NaOH
+  category: deicing
+  sara: resin
+  atom_count: 3
+  molecular_weight: 40.00
+  recommended_density: 1.40
+  available_aging: []
+  structure_file: single_moles/NaOH.mol
+  ff_assignment:
+    route: ionic_profile
+    status: active
+    source_id: NaOH
+    profile_id: joung_cheatham_nacl_v1
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: Urea
+  name: Urea
+  paper_name: Urea
+  category: deicing
+  sara: resin
+  atom_count: 8
+  molecular_weight: 60.06
+  recommended_density: 0.90
+  available_aging: []
+  structure_file: single_moles/Urea.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: Urea
+    formal_charge: 0
+    canonical_smiles: NC(=O)N
+# === Fuel / Hydrocarbons ===
+- base_id: Toluene
+  name: Toluene
+  paper_name: Toluene
+  category: fuel
+  sara: aromatic
+  atom_count: 15
+  molecular_weight: 92.141
+  recommended_density: 0.87
+  available_aging: []
+  structure_file: single_moles/Toluene.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: Toluene
+    formal_charge: 0
+    canonical_smiles: Cc1ccccc1
+- base_id: nHeptane
+  name: n-Heptane
+  paper_name: n-Heptane
+  category: fuel
+  sara: saturate
+  atom_count: 23
+  molecular_weight: 100.205
+  recommended_density: 0.68
+  available_aging: []
+  structure_file: single_moles/nHeptane.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: nHeptane
+    formal_charge: 0
+    canonical_smiles: CCCCCCC
+- base_id: nHexadecane
+  name: n-Hexadecane
+  paper_name: n-Hexadecane
+  category: fuel
+  sara: saturate
+  atom_count: 50
+  molecular_weight: 226.44
+  recommended_density: 0.77
+  available_aging: []
+  structure_file: single_moles/nHexadecane.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: nHexadecane
+    formal_charge: 0
+    canonical_smiles: CCCCCCCCCCCCCCCC
+# === Organic Acids ===
+- base_id: AceticAcid
+  name: Acetic Acid
+  paper_name: Acetic Acid
+  category: organic_acid
+  sara: aromatic
+  atom_count: 8
+  molecular_weight: 60.05
+  recommended_density: 1.05
+  available_aging: []
+  structure_file: single_moles/AceticAcid.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: AceticAcid
+    formal_charge: 0
+    canonical_smiles: CC(=O)O
+- base_id: FormicAcid
+  name: Formic Acid
+  paper_name: Formic Acid
+  category: organic_acid
+  sara: aromatic
+  atom_count: 5
+  molecular_weight: 46.03
+  recommended_density: 1.22
+  available_aging: []
+  structure_file: single_moles/FormicAcid.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: FormicAcid
+    formal_charge: 0
+    canonical_smiles: O=CO
+# === Solvents ===
+- base_id: Methanol
+  name: Methanol
+  paper_name: Methanol
+  category: solvent
+  sara: aromatic
+  atom_count: 6
+  molecular_weight: 32.04
+  recommended_density: 0.79
+  available_aging: []
+  structure_file: single_moles/Methanol.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: Methanol
+    formal_charge: 0
+    canonical_smiles: CO
+- base_id: Ethanol
+  name: Ethanol
+  paper_name: Ethanol
+  category: solvent
+  sara: aromatic
+  atom_count: 9
+  molecular_weight: 46.07
+  recommended_density: 0.79
+  available_aging: []
+  structure_file: single_moles/Ethanol.mol
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: Ethanol
+    formal_charge: 0
+    canonical_smiles: CCO
+# === Inorganic Acid — strong inorganic acid, blocked ===
+# v01.02.07: H2SO4 recategorized from "aging" to "inorganic_acid"
+# (H2SO4 is a corrosive acid, not an asphalt aging product)
+- base_id: H2SO4
+  name: Sulfuric Acid
+  paper_name: H2SO4
+  category: inorganic_acid
+  sara: aromatic
+  atom_count: 7
+  molecular_weight: 98.08
+  recommended_density: 1.84
+  available_aging: []
+  structure_file: single_moles/H2SO4.mol
+  ff_assignment:
+    route: blocked
+    status: blocked_placeholder
+    source_id: H2SO4
+    formal_charge: 0
+    canonical_smiles: null

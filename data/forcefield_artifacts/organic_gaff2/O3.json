@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "O3",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from O3.mol",
+  "canonical_smiles": null,
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "O",
+      "ff_type": "os",
+      "charge": 0.554,
+      "epsilon": 0.0726,
+      "sigma": 3.156098
+    },
+    {
+      "index": 2,
+      "element": "O",
+      "ff_type": "o",
+      "charge": -0.277,
+      "epsilon": 0.1463,
+      "sigma": 3.048121
+    },
+    {
+      "index": 3,
+      "element": "O",
+      "ff_type": "o",
+      "charge": -0.277,
+      "epsilon": 0.1463,
+      "sigma": 3.048121
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "os-o",
+      "k": 109.1,
+      "r0": 1.504
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "o-os-o",
+      "k": 98.0,
+      "theta0": 114.68
+    }
+  ],
+  "dihedral_types": [],
+  "improper_types": [],
+  "improper_instances": []
+}

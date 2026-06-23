@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "Methanol",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from Methanol.mol",
+  "canonical_smiles": "CO",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": 0.1167,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 2,
+      "element": "O",
+      "ff_type": "oh",
+      "charge": -0.5988,
+      "epsilon": 0.093,
+      "sigma": 3.242871
+    },
+    {
+      "index": 3,
+      "element": "H",
+      "ff_type": "h1",
+      "charge": 0.0287,
+      "epsilon": 0.0208,
+      "sigma": 2.421997
+    },
+    {
+      "index": 4,
+      "element": "H",
+      "ff_type": "h1",
+      "charge": 0.0287,
+      "epsilon": 0.0208,
+      "sigma": 2.421997
+    },
+    {
+      "index": 5,
+      "element": "H",
+      "ff_type": "h1",
+      "charge": 0.0287,
+      "epsilon": 0.0208,
+      "sigma": 2.421997
+    },
+    {
+      "index": 6,
+      "element": "H",
+      "ff_type": "ho",
+      "charge": 0.396,
+      "epsilon": 0.0047,
+      "sigma": 0.537925
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "c3-oh",
+      "k": 285.1,
+      "r0": 1.4242
+    },
+    {
+      "key": "c3-h1",
+      "k": 344.2,
+      "r0": 1.0969
+    },
+    {
+      "key": "oh-ho",
+      "k": 535.5,
+      "r0": 0.9725
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "c3-oh-ho",
+      "k": 65.13,
+      "theta0": 107.39
+    },
+    {
+      "key": "oh-c3-h1",
+      "k": 56.29,
+      "theta0": 110.38
+    },
+    {
+      "key": "h1-c3-h1",
+      "k": 35.64,
+      "theta0": 108.55
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "h1-c3-oh-ho",
+      "style": "fourier",
+      "coeffs": [
+        0.123,
+        1.0,
+        3.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

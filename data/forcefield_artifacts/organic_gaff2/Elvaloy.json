@@ -1,0 +1,227 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "Elvaloy",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from Elvaloy.mol",
+  "canonical_smiles": null,
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": 0.26,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 2,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.6263,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 3,
+      "element": "C",
+      "ff_type": "c2",
+      "charge": 0.5027,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 4,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.2266,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 5,
+      "element": "C",
+      "ff_type": "c2",
+      "charge": 0.2007,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 6,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.1623,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 7,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.639,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 8,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": 0.42,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 9,
+      "element": "O",
+      "ff_type": "os",
+      "charge": -0.2697,
+      "epsilon": 0.0726,
+      "sigma": 3.156098
+    },
+    {
+      "index": 10,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": 0.3796,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 11,
+      "element": "O",
+      "ff_type": "os",
+      "charge": -0.2647,
+      "epsilon": 0.0726,
+      "sigma": 3.156098
+    },
+    {
+      "index": 12,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": 0.4256,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "c1-c1",
+      "k": 699.1,
+      "r0": 1.2095
+    },
+    {
+      "key": "c1-c2",
+      "k": 466.9,
+      "r0": 1.3185
+    },
+    {
+      "key": "c2-os",
+      "k": 350.5,
+      "r0": 1.3628
+    },
+    {
+      "key": "os-c1",
+      "k": 415.5,
+      "r0": 1.3141
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "c1-c1-c2",
+      "k": 57.32,
+      "theta0": 180.0
+    },
+    {
+      "key": "c1-c2-c1",
+      "k": 147.58,
+      "theta0": 25.14
+    },
+    {
+      "key": "c1-c2-os",
+      "k": 80.98,
+      "theta0": 120.67
+    },
+    {
+      "key": "c2-c1-c2",
+      "k": 55.26,
+      "theta0": 179.33
+    },
+    {
+      "key": "c2-os-c1",
+      "k": 92.65,
+      "theta0": 117.27
+    },
+    {
+      "key": "c1-c1-c1",
+      "k": 74.86,
+      "theta0": 116.12
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "c1-c1-c2-c1",
+      "style": "fourier",
+      "coeffs": [
+        0.0,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "c1-c1-c2-os",
+      "style": "fourier",
+      "coeffs": [
+        0.0,
+        1.0,
+        2.0,
+        1.1,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "c1-c2-c1-c2",
+      "style": "fourier",
+      "coeffs": [
+        0.0,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "c1-c2-os-c1",
+      "style": "fourier",
+      "coeffs": [
+        1.05,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "c2-c1-c2-os",
+      "style": "fourier",
+      "coeffs": [
+        0.0,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "c1-c1-c1-c2",
+      "style": "fourier",
+      "coeffs": [
+        0.0,
+        1.0,
+        2.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

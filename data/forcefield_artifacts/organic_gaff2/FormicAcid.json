@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "FormicAcid",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from FormicAcid.mol",
+  "canonical_smiles": "O=CO",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "c",
+      "charge": 0.6179,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 2,
+      "element": "O",
+      "ff_type": "oh",
+      "charge": -0.5921,
+      "epsilon": 0.093,
+      "sigma": 3.242871
+    },
+    {
+      "index": 3,
+      "element": "O",
+      "ff_type": "o",
+      "charge": -0.483,
+      "epsilon": 0.1463,
+      "sigma": 3.048121
+    },
+    {
+      "index": 4,
+      "element": "H",
+      "ff_type": "h5",
+      "charge": 0.0332,
+      "epsilon": 0.0161,
+      "sigma": 2.447299
+    },
+    {
+      "index": 5,
+      "element": "H",
+      "ff_type": "ho",
+      "charge": 0.424,
+      "epsilon": 0.0047,
+      "sigma": 0.537925
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "c-oh",
+      "k": 359.3,
+      "r0": 1.3556
+    },
+    {
+      "key": "c-o",
+      "k": 590.6,
+      "r0": 1.219
+    },
+    {
+      "key": "c-h5",
+      "k": 332.1,
+      "r0": 1.1053
+    },
+    {
+      "key": "oh-ho",
+      "k": 535.5,
+      "r0": 0.9725
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "oh-c-o",
+      "k": 102.03,
+      "theta0": 122.09
+    },
+    {
+      "key": "c-oh-ho",
+      "k": 68.46,
+      "theta0": 106.54
+    },
+    {
+      "key": "oh-c-h5",
+      "k": 58.66,
+      "theta0": 109.49
+    },
+    {
+      "key": "o-c-h5",
+      "k": 59.35,
+      "theta0": 123.78
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "ho-oh-c-o",
+      "style": "fourier",
+      "coeffs": [
+        1.9,
+        1.0,
+        1.0,
+        2.3,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "h5-c-oh-ho",
+      "style": "fourier",
+      "coeffs": [
+        2.3,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "h5-o-c-oh",
+      "style": "fourier",
+      "coeffs": [
+        1.1,
+        1.0,
+        2.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

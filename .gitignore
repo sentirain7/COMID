@@ -1,0 +1,136 @@
+# Virtual environment
+venv/
+.venv/
+env/
+asphalt_venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib/
+/lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# mypy
+.mypy_cache/
+
+# ruff
+.ruff_cache/
+
+# Environment
+.env
+.env.local
+
+# Data directories (keep structure, ignore runtime data)
+cache/e_intra/*.json
+cache/typing_charge/
+# data/arrays/*.parquet ARE tracked (RDF/MSD/stress curve data — small ~10MB,
+# shared so array-metric graphs render on another machine after a pull). Only
+# the raw .npy intermediates stay local.
+data/arrays/**/*.npy
+
+# FF artifact runtime state — locks are machine-local, not tracked.
+# JSON artifacts AND admin_status sidecars ARE tracked (SSOT for multi-machine).
+data/forcefield_artifacts/**/.*.generating.lock
+# E_intra sidecar write-through: the *.json files ARE tracked (shareable SSOT);
+# the per-file lock/tmp scratch files are machine-local.
+data/forcefield_artifacts/e_intra/*.lock
+data/forcefield_artifacts/e_intra/*.tmp
+
+# Result sidecar write-through: the *.json files ARE tracked (shareable result
+# SSOT — experiment metadata + scalar metrics + array-curve refs); the per-file
+# lock/tmp scratch files are machine-local.
+data/result_sidecars/*.lock
+data/result_sidecars/*.tmp
+
+# Experiment results (runtime — large, machine-specific)
+database/
+
+# DB backups (runtime)
+.local_backup/
+
+# Local settings (machine-specific)
+settings.json
+
+# LAMMPS output (keep in experiments only)
+*.lammpstrj
+*.restart
+
+# Logs
+*.log
+
+# SQLite database (runtime data — must not be stashed/replaced by git)
+asphalt_agent.db
+asphalt_agent.db-wal
+asphalt_agent.db-shm
+asphalt_agent.db-journal
+*.db.bak.*
+
+# PID files (runtime state)
+.pids/
+
+# Celery
+celerybeat-schedule
+celerybeat-schedule.db
+celerybeat.pid
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+__pycache__/
+
+# COMID release: exclude stray runtime/journal artifacts
+=0.21
+log.lammps
+vol*_no*.pdf
+
+# COMID release: generated/result/runtime data (regenerated at runtime; not shipped)
+data/arrays/
+data/result_sidecars/
+data/crystal_structures/
+data/analog_roads/
+data/traffic/
+presentation/
+bin/
+*.db
+*.db-shm
+*.db-wal

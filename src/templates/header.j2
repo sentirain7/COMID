@@ -1,0 +1,24 @@
+# LAMMPS input script
+# Tier: {{ tier }}
+# Force Field: {{ ff_type }}
+# Study Type: {{ study_type | default('bulk') }}
+# Temperature: {{ temperature_K }} K
+# Pressure: {{ pressure_atm }} atm
+# Protocol hash: {{ protocol_hash }}
+{% if e_intra_method %}
+# E_intra Method: {{ e_intra_method }}
+{% endif %}
+{% if vacuum_cutoff_a is not none %}
+# Vacuum Cutoff: {{ '%.2f'|format(vacuum_cutoff_a) }} A
+{% endif %}
+
+# Initialization
+units real
+atom_style full
+{% if study_type == 'layer_bulkff' or study_type == 'layer' %}
+boundary p p f
+{% elif study_type == 'single_molecule_vacuum' and e_intra_method != 'single_molecule_periodic' %}
+boundary s s s
+{% else %}
+boundary p p p
+{% endif %}

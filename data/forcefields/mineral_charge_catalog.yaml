@@ -1,0 +1,78 @@
+# Mineral Partial-Charge Catalog (SSOT)
+#
+# Single Source of Truth for the per-material partial charges written onto
+# crystal-slab atoms at generation time (CrystalBuilder).
+#
+# Force field design (force-field-theory.md §3):
+#   - LJ     : INTERFACE FF (Heinz et al., Langmuir 2013, 29, 1754)
+#   - mixing : Lorentz-Berthelot (GAFF2-compatible) — pair_modify mix arithmetic
+#   - charges: PER-MATERIAL source (NOT a single family). "CLAYFF" is only
+#     correct for the silicate/aluminate phases; carbonates use Raiteri-Gale,
+#     ionic oxides/halides use formal charges. See ``charge_sources`` below.
+#     (Earlier revisions blanket-labelled everything "CLAYFF" — corrected
+#     v01.05.22 after checking the canonical CLAYFF.frc, which has no carbonate
+#     and uses ao=+1.575 / ob=-1.05 for aluminate.)
+#
+# Why a material-level charge catalog (vs the element-level mineral_lj_catalog
+# and the site-rule inorganic_profiles)?
+#   - Charges are material-specific (the same element O carries -1.05 in SiO2
+#     but -2.0 in MgO), so a flat element catalog cannot hold them.
+#   - The crystal slab generator needs charges keyed by (material, element)
+#     before surface-site (hydroxyl) balancing is applied.
+#
+# Consistency contracts (enforced by tests/unit/test_mineral_charge_ssot.py):
+#   1. This yaml MUST match the hardcoded fallback in
+#      src/builder/crystal_builder.py (_CHARGES_HARDCODED_FALLBACK), value by
+#      value. Edit BOTH when changing a charge.
+#   2. Where a material overlaps a curated profile in inorganic_profiles.yaml
+#      (SiO2, Al2O3, CaCO3), the bulk cation / anion charges MUST agree with
+#      that profile's site_rules. This binds the two charge sources so they
+#      cannot drift.
+#   3. Every material in ``materials`` MUST have a ``charge_sources`` entry.
+#
+# Keys are CrystalMaterial enum *values* (StrEnum), e.g. "SiO2", "CaCO3".
+# Charges are in elementary charge units (e).
+
+schema_version: 1
+
+# Provenance of each material's charge set (honest per-material attribution).
+charge_sources:
+  SiO2: "CLAYFF (Cygan et al. 2004, J. Phys. Chem. B 108, 1255)"
+  Al2O3: "CLAYFF (Cygan et al. 2004) — ao=+1.575, ob=-1.05"
+  CaCO3: "Raiteri-Gale-Quigley-Rodger 2010 (J. Phys. Chem. C 114, 5997)"
+  MgCO3: "Raiteri-Gale carbonate model (2010), Mg analogue"
+  TiO2: "rutile (Bandura & Kubicki 2003)"
+  Fe2O3: "hematite, formal-derived ionic"
+  ZnO: "zincite, formal-derived ionic"
+  MgO: "formal ionic (rock-salt oxide)"
+  CaO: "formal ionic (rock-salt oxide)"
+  NaCl: "formal ionic (rock salt)"
+  KCl: "formal ionic (rock salt)"
+  Al: "uncharged metal (metallic cohesion via INTERFACE FF LJ)"
+  Fe: "uncharged metal (metallic cohesion via INTERFACE FF LJ)"
+  Cu: "uncharged metal (metallic cohesion via INTERFACE FF LJ)"
+  Ni: "uncharged metal (metallic cohesion via INTERFACE FF LJ)"
+
+materials:
+  # ── Oxides / Silicates ──
+  SiO2:   {Si: 2.1,    O: -1.05}
+  Al2O3:  {Al: 1.575,  O: -1.05}
+  MgO:    {Mg: 2.0,    O: -2.0}
+  Fe2O3:  {Fe: 1.8,    O: -1.2}
+  CaO:    {Ca: 2.0,    O: -2.0}
+  TiO2:   {Ti: 2.196,  O: -1.098}
+  ZnO:    {Zn: 1.2,    O: -1.2}
+
+  # ── Carbonates ──
+  CaCO3:  {Ca: 2.0,    C: 1.123, O: -1.041}
+  MgCO3:  {Mg: 2.0,    C: 1.123, O: -1.041}
+
+  # ── Halides (ionic) ──
+  NaCl:   {Na: 1.0,    Cl: -1.0}
+  KCl:    {K: 1.0,     Cl: -1.0}
+
+  # ── FCC / BCC metals (uncharged; metallic cohesion via INTERFACE FF LJ) ──
+  Al:     {Al: 0.0}
+  Fe:     {Fe: 0.0}
+  Cu:     {Cu: 0.0}
+  Ni:     {Ni: 0.0}

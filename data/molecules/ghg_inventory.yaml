@@ -1,0 +1,57 @@
+version: "1.0"
+description: "Cradle-to-gate GHG emission factors (kg CO2-eq per kg material)"
+references:
+  - "Eurobitume Life Cycle Inventory (2020)"
+  - "ecoinvent 3.9"
+  - "Stripple (2001)"
+
+# Binder molecules — base_id unit (parse_molecule_id().base_id)
+binder_molecules:
+  SA-Squalane:  0.40
+  SA-Hopane:    0.44
+  AR-PHPN:      0.48
+  AR-DOCHN:     0.47
+  RE-Quin:      0.52
+  RE-Pyrid:     0.50
+  RE-Thio:      0.54
+  RE-Benzo:     0.49
+  RE-Trim:      0.48
+  AS-Pyrrole:   0.58
+  AS-Phenol:    0.55
+  AS-Thio:      0.56
+
+# SARA category fallback (when base_id not matched)
+sara_fallback:
+  saturate:   0.42
+  aromatic:   0.48
+  resin:      0.51
+  asphaltene: 0.55
+
+# Additives — canonical mol_id (additives.yaml keys)
+additives:
+  SBS:            3.40
+  Elvaloy:        2.80
+  PPA:            2.10
+  SiO2:           1.60
+  Sasobit:        1.20
+  NanoClay:       0.85
+  Lignin:        -0.30
+  CRM:           -0.50
+  Carbon_Nano_Tube: 25.0
+  Graphine:      18.0
+  SBS_3_7:        3.20
+  Biopolymer_Xanthan2: 0.60
+  Polymer_PolyEthylene: 2.00
+  Polymer_Polycis14Butadiene: 2.50
+  Polymer_Polycis14Isoprene: 2.60
+  Epoxy_PolyEpoxyResinE51: 5.50
+  Emulsifiers_CetyltrimethylammoniumChloride: 1.80
+  Emulsifiers_SodiumDodecylbenzeneSulfonate: 1.50
+  "PhaseChange_Palmitic Acid": 1.10
+  "PhaseChange_Stearic Acid": 1.15
+  PolyLongchaneAlkanes: 1.30
+
+# Default values for unknown materials
+defaults:
+  binder: 0.50
+  additive: 0.0

@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "ff_family": "ionic_jc_tip3p",
+  "charge_model": "formal",
+  "mol_id": "CaCl2",
+  "generator": "tleap_ionsjc_tip3p",
+  "generator_version": "ambertools_parmed",
+  "provenance": "Joung-Cheatham 2008 (monovalent) + Li/Merz 2013 (divalent) via leaprc.water.tip3p",
+  "canonical_smiles": "",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "Ca",
+      "ff_type": "Ca2+",
+      "charge": 2.0,
+      "sigma": 2.938184,
+      "epsilon": 0.105929
+    },
+    {
+      "index": 2,
+      "element": "Cl",
+      "ff_type": "Cl-",
+      "charge": -1.0,
+      "sigma": 4.477657,
+      "epsilon": 0.035591
+    },
+    {
+      "index": 3,
+      "element": "Cl",
+      "ff_type": "Cl-",
+      "charge": -1.0,
+      "sigma": 4.477657,
+      "epsilon": 0.035591
+    }
+  ],
+  "bond_types": [],
+  "angle_types": [],
+  "dihedral_types": [],
+  "improper_types": []
+}

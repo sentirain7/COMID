@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ARCANE-D Custom Styles - KICT-inspired Professional Theme */
+:root {
+  /* Background tones */
+  --color-bg: #0c1222;
+  --color-bg-secondary: #111827;
+  --color-bg-tertiary: #1f2937;
+  --color-border: #2d3748;
+  --color-border-light: #374151;
+
+  /* Text colors */
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  /* ARCANE-D Brand colors */
+  --color-primary: #3377ff;
+  --color-primary-dark: #1a56f5;
+  --color-accent: #8b5cf6;
+  --color-accent-dark: #7c3aed;
+
+  /* Korean-inspired accent */
+  --color-kict-blue: #1a4480;
+  --color-kict-light: #4b7eb8;
+}
+
+body {
+  @apply bg-[#0c1222] text-slate-100 font-sans antialiased;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+  @apply tracking-tight;
+}
+
+/* ARCANE-D Brand Title */
+.arcane-title {
+  @apply text-xl font-bold tracking-tight;
+  background: linear-gradient(135deg, #3377ff 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Status colors */
+.status-pending {
+  @apply bg-yellow-500/20 text-yellow-400 border-yellow-500/30;
+}
+
+.status-running {
+  @apply bg-blue-500/20 text-blue-400 border-blue-500/30;
+}
+
+.status-completed {
+  @apply bg-green-500/20 text-green-400 border-green-500/30;
+}
+
+.status-failed {
+  @apply bg-red-500/20 text-red-400 border-red-500/30;
+}
+
+.status-queued {
+  @apply bg-purple-500/20 text-purple-400 border-purple-500/30;
+}
+
+/* Card styles - KICT-inspired clean design */
+.card {
+  @apply bg-[#111827] rounded-xl border border-[#1f2937] shadow-xl;
+  backdrop-filter: blur(8px);
+}
+
+.card-header {
+  @apply px-5 py-4 border-b border-[#1f2937] font-semibold text-white;
+}
+
+.card-body {
+  @apply p-5;
+}
+
+.card-elevated {
+  @apply bg-[#111827] rounded-xl border border-[#1f2937] shadow-2xl;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Table styles */
+.table {
+  @apply w-full text-sm;
+}
+
+.table th {
+  @apply px-4 py-3 text-left text-slate-400 font-medium border-b border-slate-700;
+}
+
+.table td {
+  @apply px-4 py-3 border-b border-slate-700/50;
+}
+
+.table tr:hover {
+  @apply bg-slate-700/30;
+}
+
+/* Button styles - KICT-inspired professional buttons */
+.btn {
+  @apply px-4 py-2.5 rounded-lg font-medium transition-all duration-200 shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-blue-500/20;
+}
+
+.btn-primary:hover {
+  @apply shadow-lg shadow-blue-500/30 transform -translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply bg-[#1f2937] hover:bg-[#374151] text-white border border-[#374151];
+}
+
+.btn-danger {
+  @apply bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white;
+}
+
+.btn-outline {
+  @apply bg-transparent border border-blue-500 text-blue-400 hover:bg-blue-500/10;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-sm rounded-md;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-base rounded-xl;
+}
+
+/* Input styles */
+.input {
+  @apply w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white
+         placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.label {
+  @apply block text-sm font-medium text-slate-300 mb-1;
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
+}
+
+/* Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Recharts customization */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #334155;
+}
+
+.recharts-text {
+  fill: #94a3b8;
+}

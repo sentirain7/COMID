@@ -1,0 +1,438 @@
+library:
+  name: asphalt_binder
+  version: '1.1'
+  description: Binder and aging molecule catalog (SSOT)
+  file_format: mol
+  reference:
+    paper: Li and Greenfield (2014)
+    doi: 10.1016/j.fuel.2013.07.012
+    validation_paper: Yun (2024)
+    validation_doi: 10.7855/IJHE.2024.26.6.013
+aging_categories:
+  non_aging:
+    directory: asphalt_binder/non_aging_moles
+    prefix: U
+    description: Unaged (virgin) asphalt molecules
+    fallback_to: null
+  short_aging:
+    directory: asphalt_binder/short_aging_moles
+    prefix: S
+    description: Short-term aged (RTFOT equivalent)
+    fallback_to: non_aging
+  long_aging:
+    directory: asphalt_binder/long_aging_moles
+    prefix: L
+    description: Long-term aged (PAV equivalent)
+    fallback_to: non_aging
+sara_mapping:
+  AR: aromatic
+  AS: asphaltene
+  RE: resin
+  SA: saturate
+temperature_codes:
+  0293: 293
+file_pattern: '{prefix}-{sara}-{name}-{temp_code}NPT_Mol.mol'
+molecules:
+# SARA binder molecules — all use organic_rdkit_legacy route (active baseline).
+# High-accuracy organic_curated_artifact promotion is per-molecule and requires
+# a curated artifact in data/forcefield_artifacts/organic_gaff2/.
+- base_id: SA-Squalane
+  name: Squalane
+  paper_name: Squalane
+  sara: saturate
+  atom_count: 62
+  molecular_weight: 422.81
+  available_aging:
+  - non_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: SA-Hopane
+  name: Hopane
+  paper_name: Hopane
+  sara: saturate
+  atom_count: 54
+  molecular_weight: 412.7
+  available_aging:
+  - non_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: AR-PHPN
+  name: Phenanthrene
+  paper_name: PHPN
+  sara: aromatic
+  atom_count: 60
+  molecular_weight: 480.82
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: AR-DOCHN
+  name: Dicyclic Oxygenated Cyclohexane Naphthalene
+  paper_name: DOCHN
+  sara: aromatic
+  atom_count: 50
+  molecular_weight: 422.65
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: RE-Quin
+  name: Quinolinohopane
+  paper_name: Quinolinohopane
+  sara: resin
+  atom_count: 65
+  molecular_weight: 565.9
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: RE-Pyrid
+  name: Pyridinohopane
+  paper_name: Pyridinohopane
+  sara: resin
+  atom_count: 55
+  molecular_weight: 501.8
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: RE-Thio
+  name: Thioisorenieratane
+  paper_name: Thioisorenieratane
+  sara: resin
+  atom_count: 50
+  molecular_weight: 580.96
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: RE-Benzo
+  name: Benzobisbenzothiophene
+  paper_name: Benzonbisbenzothiophene
+  sara: resin
+  atom_count: 45
+  molecular_weight: 352.56
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: RE-Trim
+  name: Trimethylbenzene Oxane
+  paper_name: Trimethylbenzene-oxane
+  sara: resin
+  atom_count: 40
+  molecular_weight: 414.7
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: AS-Pyrrole
+  name: Pyrrolic Asphaltene
+  paper_name: Pyrrole
+  sara: asphaltene
+  atom_count: 100
+  molecular_weight: 888.35
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: AS-Phenol
+  name: Phenolic Asphaltene
+  paper_name: Phenol
+  sara: asphaltene
+  atom_count: 90
+  molecular_weight: 702.04
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+- base_id: AS-Thio
+  name: Thiophenic Asphaltene
+  paper_name: Thiophene
+  sara: asphaltene
+  atom_count: 95
+  molecular_weight: 718.1
+  available_aging:
+  - non_aging
+  - short_aging
+  - long_aging
+  ff_assignment:
+    route: organic_curated_artifact
+    status: active
+    source_id: _variant_
+    formal_charge: 0
+    canonical_smiles: null
+binder_types:
+  AAA1:
+    description: AAA-1 asphalt binder composition from Li & Greenfield (2014)
+    reference: Li and Greenfield (2014), Table 1
+    composition:
+      SA-Squalane:
+      - 4
+      - 8
+      - 12
+      SA-Hopane:
+      - 4
+      - 8
+      - 12
+      AR-PHPN:
+      - 11
+      - 22
+      - 33
+      AR-DOCHN:
+      - 13
+      - 26
+      - 39
+      RE-Quin:
+      - 4
+      - 8
+      - 12
+      RE-Pyrid:
+      - 4
+      - 8
+      - 12
+      RE-Thio:
+      - 4
+      - 8
+      - 12
+      RE-Benzo:
+      - 15
+      - 30
+      - 45
+      RE-Trim:
+      - 5
+      - 10
+      - 15
+      AS-Pyrrole:
+      - 2
+      - 4
+      - 6
+      AS-Phenol:
+      - 3
+      - 6
+      - 9
+      AS-Thio:
+      - 3
+      - 6
+      - 9
+    totals:
+      X1: 72
+      X2: 144
+      X3: 216
+    sara_fractions:
+      saturate: 0.111
+      aromatic: 0.333
+      resin: 0.444
+      asphaltene: 0.111
+  AAK1:
+    description: AAK-1 asphalt binder (SHRP Materials Reference Library)
+    reference: 'SHRP MRL, AAA1 pattern scaled to wt%: sat=20%, arom=40%, res=28%,
+      asp=12%'
+    composition:
+      SA-Squalane:
+      - 7
+      - 14
+      - 21
+      SA-Hopane:
+      - 7
+      - 14
+      - 21
+      AR-PHPN:
+      - 14
+      - 28
+      - 42
+      AR-DOCHN:
+      - 15
+      - 30
+      - 45
+      RE-Quin:
+      - 4
+      - 8
+      - 12
+      RE-Pyrid:
+      - 4
+      - 8
+      - 12
+      RE-Thio:
+      - 4
+      - 8
+      - 12
+      RE-Benzo:
+      - 5
+      - 10
+      - 15
+      RE-Trim:
+      - 3
+      - 6
+      - 9
+      AS-Pyrrole:
+      - 3
+      - 6
+      - 9
+      AS-Phenol:
+      - 3
+      - 6
+      - 9
+      AS-Thio:
+      - 3
+      - 6
+      - 9
+    totals:
+      X1: 72
+      X2: 144
+      X3: 216
+    sara_fractions:
+      saturate: 0.194
+      aromatic: 0.403
+      resin: 0.278
+      asphaltene: 0.125
+  AAM1:
+    description: AAM-1 asphalt binder (SHRP Materials Reference Library)
+    reference: 'SHRP MRL, AAA1 pattern scaled to wt%: sat=15%, arom=35%, res=32%,
+      asp=18%'
+    composition:
+      SA-Squalane:
+      - 5
+      - 10
+      - 15
+      SA-Hopane:
+      - 6
+      - 12
+      - 18
+      AR-PHPN:
+      - 12
+      - 24
+      - 36
+      AR-DOCHN:
+      - 13
+      - 26
+      - 39
+      RE-Quin:
+      - 4
+      - 8
+      - 12
+      RE-Pyrid:
+      - 4
+      - 8
+      - 12
+      RE-Thio:
+      - 5
+      - 10
+      - 15
+      RE-Benzo:
+      - 7
+      - 14
+      - 21
+      RE-Trim:
+      - 3
+      - 6
+      - 9
+      AS-Pyrrole:
+      - 4
+      - 8
+      - 12
+      AS-Phenol:
+      - 4
+      - 8
+      - 12
+      AS-Thio:
+      - 5
+      - 10
+      - 15
+    totals:
+      X1: 72
+      X2: 144
+      X3: 216
+    sara_fractions:
+      saturate: 0.153
+      aromatic: 0.347
+      resin: 0.319
+      asphaltene: 0.181
+structure_sizes:
+  X1:
+    multiplier: 1
+    total_molecules: 72
+    description: Base size - minimum for density calculations
+    recommended_for:
+    - density
+    - glass_transition
+  X2:
+    multiplier: 2
+    total_molecules: 144
+    description: 2x size - intermediate
+    recommended_for:
+    - density
+    - glass_transition
+  X3:
+    multiplier: 3
+    total_molecules: 216
+    description: 3x size - recommended for RDF and energy calculations
+    recommended_for:
+    - density
+    - glass_transition
+    - rdf
+    - energy
+    - tensile_strength
+    notes: Required for temperature-dependent RDF analysis per Yun (2024)

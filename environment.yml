@@ -1,0 +1,59 @@
+name: asphalt_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+
+  # === Conda-forge exclusive (pip 불가) ===
+  - ambertools
+
+  # === Scientific computing (conda-forge 최적화) ===
+  - rdkit
+  - numpy<2
+  - scipy
+  - scikit-learn
+  - pyarrow
+  - xgboost
+  - lightgbm
+  - pymatgen
+
+  # === Core runtime ===
+  - pyyaml>=6.0
+  - jinja2>=3.0
+  - requests>=2.31
+
+  # === Database ===
+  - sqlalchemy>=2.0
+  - alembic
+  - aiosqlite
+
+  # === Queue / Orchestration ===
+  - celery>=5.0
+  - redis-py
+  - kombu
+
+  # === API / Web ===
+  - fastapi
+  - uvicorn
+  - psutil
+
+  # === Dev tools ===
+  - pytest
+  - pytest-cov
+  - pytest-asyncio
+
+  # === pip-only packages (conda-forge에 없거나 pip이 더 안정적) ===
+  - pip:
+    - pydantic>=2.0
+    - pydantic-settings>=2.0
+    - python-dotenv>=1.0
+    - strawberry-graphql
+    - prometheus-client
+    - starlette
+    - anthropic
+    - openai
+    - httpx
+    - aiohttp
+    - tiktoken
+    - -e .[all]

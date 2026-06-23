@@ -1,0 +1,27 @@
+/**
+ * Shared UI components - Single source of truth for common UI elements
+ */
+
+export { StatusBadge, StatusBadgeSimple } from './StatusBadge'
+export { TierBadge, TierBadgeSimple } from './TierBadge'
+export { PriorityBadge } from './PriorityBadge'
+export { ProgressBar, ProgressBarCompact } from './ProgressBar'
+export { default as DeleteModal } from './DeleteModal'
+export { default as CategoryBadge } from './CategoryBadge'
+export { default as AgingBadge } from './AgingBadge'
+export { default as TemperatureBadge } from './TemperatureBadge'
+export { default as MetricsTable } from './MetricsTable'
+export { default as CompositionTable } from './CompositionTable'
+export { default as PlaceholderPage } from './PlaceholderPage'
+export { default as NotificationBanner } from './NotificationBanner'
+export { default as CandidateCard } from './CandidateCard'
+export { default as ScoreBar } from './ScoreBar'
+export { default as TabGroup } from './TabGroup'
+export { default as PageHeader } from './PageHeader'
+export { default as ElementLegend } from './ElementLegend'
+export { default as AsyncSectionShell } from './AsyncSectionShell'
+export { default as SelectionActionBar } from './SelectionActionBar'
+export { EIntraCoverageBadge } from './EIntraCoverageBadge'
+export { EIntraMethodBadge } from './EIntraMethodBadge'
+export { PrecisionAnalysisPanel } from './PrecisionAnalysisPanel'
+export { AppliedForceFieldNote } from './AppliedForceFieldNote'

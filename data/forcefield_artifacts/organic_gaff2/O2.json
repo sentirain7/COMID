@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "O2",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from O2.mol",
+  "canonical_smiles": "O=O",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "O",
+      "ff_type": "o",
+      "charge": 0.0,
+      "epsilon": 0.1463,
+      "sigma": 3.048121
+    },
+    {
+      "index": 2,
+      "element": "O",
+      "ff_type": "o",
+      "charge": -0.0,
+      "epsilon": 0.1463,
+      "sigma": 3.048121
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "o-o",
+      "k": 141.4,
+      "r0": 1.43
+    }
+  ],
+  "angle_types": [],
+  "dihedral_types": [],
+  "improper_types": [],
+  "improper_instances": []
+}

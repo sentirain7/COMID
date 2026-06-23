@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "Toluene",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "provenance": "Test fixture for GAFF2 artifact tests (Toluene C7H8)",
+  "canonical_smiles": "Cc1ccccc1",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "atoms": [
+    {"index": 1,  "element": "C", "ff_type": "c3", "charge": -0.0877, "epsilon": 0.1094, "sigma": 3.3997},
+    {"index": 2,  "element": "H", "ff_type": "hc", "charge":  0.0442, "epsilon": 0.0157, "sigma": 2.6495},
+    {"index": 3,  "element": "H", "ff_type": "hc", "charge":  0.0442, "epsilon": 0.0157, "sigma": 2.6495},
+    {"index": 4,  "element": "H", "ff_type": "hc", "charge":  0.0442, "epsilon": 0.0157, "sigma": 2.6495},
+    {"index": 5,  "element": "C", "ff_type": "ca", "charge": -0.0587, "epsilon": 0.0860, "sigma": 3.3997},
+    {"index": 6,  "element": "C", "ff_type": "ca", "charge": -0.1448, "epsilon": 0.0860, "sigma": 3.3997},
+    {"index": 7,  "element": "C", "ff_type": "ca", "charge": -0.1448, "epsilon": 0.0860, "sigma": 3.3997},
+    {"index": 8,  "element": "C", "ff_type": "ca", "charge": -0.1228, "epsilon": 0.0860, "sigma": 3.3997},
+    {"index": 9,  "element": "C", "ff_type": "ca", "charge": -0.1228, "epsilon": 0.0860, "sigma": 3.3997},
+    {"index": 10, "element": "C", "ff_type": "ca", "charge": -0.1448, "epsilon": 0.0860, "sigma": 3.3997},
+    {"index": 11, "element": "H", "ff_type": "ha", "charge":  0.1365, "epsilon": 0.0150, "sigma": 2.5996},
+    {"index": 12, "element": "H", "ff_type": "ha", "charge":  0.1365, "epsilon": 0.0150, "sigma": 2.5996},
+    {"index": 13, "element": "H", "ff_type": "ha", "charge":  0.1395, "epsilon": 0.0150, "sigma": 2.5996},
+    {"index": 14, "element": "H", "ff_type": "ha", "charge":  0.1395, "epsilon": 0.0150, "sigma": 2.5996},
+    {"index": 15, "element": "H", "ff_type": "ha", "charge":  0.1418, "epsilon": 0.0150, "sigma": 2.5996}
+  ],
+  "bond_types": [
+    {"key": "ca-ca", "k": 461.1, "r0": 1.3984},
+    {"key": "ca-c3", "k": 323.5, "r0": 1.5105},
+    {"key": "ca-ha", "k": 345.8, "r0": 1.0860},
+    {"key": "c3-hc", "k": 337.3, "r0": 1.0920}
+  ],
+  "angle_types": [
+    {"key": "ca-ca-ca", "k": 67.18, "theta0": 119.97},
+    {"key": "ca-ca-ha", "k": 48.46, "theta0": 120.01},
+    {"key": "ca-ca-c3", "k": 63.84, "theta0": 120.33},
+    {"key": "ca-c3-hc", "k": 46.96, "theta0": 110.15},
+    {"key": "hc-c3-hc", "k": 39.43, "theta0": 108.35}
+  ],
+  "dihedral_types": [
+    {"key": "ca-ca-ca-ca", "style": "fourier", "coeffs": [3.625, 1.0, 2.0]},
+    {"key": "ca-ca-ca-ha", "style": "fourier", "coeffs": [3.625, 1.0, 2.0]},
+    {"key": "ca-ca-ca-c3", "style": "fourier", "coeffs": [3.625, 1.0, 2.0]},
+    {"key": "ca-ca-c3-hc", "style": "fourier", "coeffs": [0.0, 1.0, 2.0]},
+    {"key": "ha-ca-ca-ha", "style": "fourier", "coeffs": [3.625, 1.0, 2.0]},
+    {"key": "ha-ca-ca-c3", "style": "fourier", "coeffs": [3.625, 1.0, 2.0]}
+  ],
+  "improper_types": [
+    {"key": "ca-ca-ca-ha", "style": "cvff", "coeffs": [1.1, -1.0, 2.0]},
+    {"key": "ca-ca-ca-c3", "style": "cvff", "coeffs": [1.1, -1.0, 2.0]}
+  ]
+}

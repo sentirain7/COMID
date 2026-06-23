@@ -1,0 +1,182 @@
+# Ionic Force-Field Profiles (SSOT) — DRAFT, NOT ACTIVATED
+#
+# This file is the Single Source of Truth for ionic species
+# parameterization (NaCl, CaCl2, MgCl2, KCl, NaOH, H2SO4, ...). It is
+# the storage layer that the future Wave 3 ``ionic_executor`` will
+# consume once activation gates are released.
+#
+# Wave 3 contract (do not loosen without policy review)
+# =====================================================
+#
+# 1. EVERY profile in this file MUST start with status="draft" and
+#    stay that way until ALL FOUR activation conditions in
+#    docs/ionic_profile_policy.md are met:
+#      a. usage context locked: aqueous vs non-aqueous / asphalt
+#         interface (Joung-Cheatham 2008 was fit to TIP3P/SPC water and
+#         is NOT a drop-in for asphalt-binder interfaces)
+#      b. mixing-rule compatibility documented against GAFF2
+#         (geometric) and INTERFACE-CLAYFF (Lorentz-Berthelot)
+#      c. literature provenance recorded for the chosen ion FF
+#      d. LAMMPS input + validation regression passing in CI
+#
+# 2. The runtime ``ionic_executor.assign_ionic`` ALWAYS raises
+#    ``IonicNotActivatedError`` until BOTH conditions hold:
+#      - profile.status == "active"
+#      - the operator-level activation flag (env var or admin script)
+#        is set
+#
+# 3. The typing router (see src/forcefield/typing_router.py) returns
+#    BLOCKED for any molecule whose ff_assignment.route is
+#    ``ionic_profile`` regardless of what this file says — Wave 3 of
+#    the plan v3 explicitly defers route activation. The yaml here is
+#    the SSOT for *when* the route is eventually activated, not a
+#    backdoor to enable it.
+#
+# References (candidate ion parameter sets — none accepted yet):
+#   - Joung & Cheatham, J. Phys. Chem. B 2008, 112, 9020 (JC ion params,
+#     fit to TIP3P / SPC / SPC-E water)
+#   - Aqvist, J. Phys. Chem. 1990, 94, 8021 (alkali metals)
+#   - Dang, J. Am. Chem. Soc. 1995, 117, 6954 (Cl-)
+#
+# v0.1 | 2026-04-10 (Wave 3 scaffolding)
+
+version: "0.1"
+schema_version: 1
+
+# Wave 3 activation gates — used by ionic_executor.is_activated().
+# These are not flipped automatically; an operator must edit them in
+# the same PR that adds the activation regression test.
+activation:
+  # Set to true ONLY when ALL four policy preconditions in
+  # docs/ionic_profile_policy.md have been signed off.
+  # Limited activation for single-molecule vacuum workflows only.
+  # Binder/layered/asphalt_interface remain blocked by usage_context gate.
+  global_enabled: true
+  # Per-profile gates: the executor refuses unless both global_enabled
+  # and the per-profile entry are true.
+  enabled_profiles:
+    - joung_cheatham_nacl_v1
+    - joung_cheatham_cacl2_v1
+
+profiles:
+  # ============================================================================
+  # NaCl  —  DRAFT (rock salt; canonical alkali halide)
+  # ============================================================================
+  joung_cheatham_nacl_v1:
+    status: active
+    profile_version: "0.1"
+    family: alkali_halide
+    description: >-
+      Joung-Cheatham 2008 monovalent ion parameters for NaCl, fit to
+      TIP3P water. Limited activation: single-molecule vacuum only.
+      Binder/layered/asphalt_interface remain blocked.
+
+    applicable_context:
+      aqueous: true
+      asphalt_interface: false   # NOT validated for binder use
+      vacuum: true               # limited activation for single-molecule vacuum
+
+    mixing_rule_compatibility:
+      gaff2_arithmetic: validated
+      lorentz_berthelot: validated
+      notes: |
+        Joung-Cheatham fit under Lorentz-Berthelot. GAFF2 registry uses
+        arithmetic (= Lorentz-Berthelot). Cross interaction is consistent.
+
+    citations:
+      ion_charges: "Joung & Cheatham, J. Phys. Chem. B 2008, 112, 9020"
+      ion_lj: "Joung & Cheatham, J. Phys. Chem. B 2008, 112, 9020 (Table 2)"
+      validation: "Mixing rule validated (arithmetic/LB consistent). LAMMPS E2E pending."
+
+    # Site rules format mirrors inorganic_profiles.yaml: each ion is
+    # represented as a single-atom "site" with a fixed formal charge.
+    site_rules:
+      Na_ion:
+        element: Na
+        neighbor_pattern: {}      # ions are isolated
+        charge: 1.0
+      Cl_ion:
+        element: Cl
+        neighbor_pattern: {}
+        charge: -1.0
+
+    atom_types:
+      Na_ion:
+        mass: 22.990
+        # Joung-Cheatham 2008 Table 2, fit to TIP3P. NOT YET VALIDATED.
+        epsilon: 0.0874
+        sigma: 2.4393
+      Cl_ion:
+        mass: 35.453
+        epsilon: 0.0356
+        sigma: 4.4778
+
+    bond_types: {}    # ionic salts have no covalent bonds
+    angle_types: {}
+    dihedral_types: {}
+
+    validation:
+      neutrality_tolerance: 0.001
+      required_elements: [Na, Cl]
+      activation_blocked_reason: ""
+
+  # ============================================================================
+  # CaCl2  —  LIMITED ACTIVATION (divalent cation; deicing salt)
+  # ============================================================================
+  joung_cheatham_cacl2_v1:
+    status: active
+    profile_version: "0.1"
+    family: alkaline_earth_halide
+    description: >-
+      Calcium chloride; representative divalent deicing salt. Joung-Cheatham
+      2008 does not include Ca2+; this profile uses the Aqvist 1990 +
+      Dang 1995 combination as a placeholder. Activation requires
+      explicit divalent-cation review.
+
+    applicable_context:
+      aqueous: true
+      asphalt_interface: false
+      vacuum: true               # limited activation for single-molecule vacuum
+
+    mixing_rule_compatibility:
+      gaff2_arithmetic: validated
+      lorentz_berthelot: validated
+      notes: |
+        Aqvist parameters used Lorentz-Berthelot. GAFF2 uses arithmetic
+        (= Lorentz-Berthelot). Cross interaction is consistent.
+
+    citations:
+      ion_charges: "Aqvist, J. Phys. Chem. 1990, 94, 8021 (Ca2+); Dang, JACS 1995, 117, 6954 (Cl-)"
+      ion_lj: "Aqvist 1990 (Ca2+); Dang 1995 (Cl-)"
+      validation: "Mixing rule validated (arithmetic/LB consistent). LAMMPS E2E pending."
+
+    site_rules:
+      Ca_ion:
+        element: Ca
+        neighbor_pattern: {}
+        charge: 2.0
+      Cl_ion:
+        element: Cl
+        neighbor_pattern: {}
+        charge: -1.0
+
+    atom_types:
+      Ca_ion:
+        mass: 40.078
+        # Aqvist 1990 placeholder values; NOT yet validated.
+        epsilon: 0.4500
+        sigma: 2.4120
+      Cl_ion:
+        mass: 35.453
+        # Dang 1995 Cl- placeholder.
+        epsilon: 0.1000
+        sigma: 4.4000
+
+    bond_types: {}
+    angle_types: {}
+    dihedral_types: {}
+
+    validation:
+      neutrality_tolerance: 0.001
+      required_elements: [Ca, Cl]
+      activation_blocked_reason: ""

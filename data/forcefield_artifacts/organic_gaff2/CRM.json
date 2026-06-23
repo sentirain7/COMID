@@ -1,0 +1,159 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "CRM",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from CRM.mol",
+  "canonical_smiles": null,
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": 0.272,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 2,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.4649,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 3,
+      "element": "C",
+      "ff_type": "ce",
+      "charge": 0.4295,
+      "epsilon": 0.0988,
+      "sigma": 3.315212
+    },
+    {
+      "index": 4,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.1328,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 5,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.0765,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 6,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": 0.177,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 7,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.1328,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 8,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.0765,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 9,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": 0.177,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    },
+    {
+      "index": 10,
+      "element": "C",
+      "ff_type": "c1",
+      "charge": -0.172,
+      "epsilon": 0.1596,
+      "sigma": 3.478959
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "c1-c1",
+      "k": 699.1,
+      "r0": 1.2095
+    },
+    {
+      "key": "c1-ce",
+      "k": 336.1,
+      "r0": 1.4144
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "c1-c1-ce",
+      "k": 64.48,
+      "theta0": 129.81
+    },
+    {
+      "key": "c1-ce-c1",
+      "k": 63.72,
+      "theta0": 117.18
+    },
+    {
+      "key": "c1-c1-c1",
+      "k": 74.86,
+      "theta0": 116.12
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "c1-c1-ce-c1",
+      "style": "fourier",
+      "coeffs": [
+        0.0,
+        1.0,
+        2.0,
+        1.1,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "c1-c1-c1-ce",
+      "style": "fourier",
+      "coeffs": [
+        0.0,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "key": "c1-c1-c1-c1",
+      "style": "fourier",
+      "coeffs": [
+        0.0,
+        1.0,
+        2.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

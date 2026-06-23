@@ -1,0 +1,260 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "nHeptane",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from nHeptane.mol",
+  "canonical_smiles": "CCCCCCC",
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": -0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0916,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 2,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0799,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 3,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0784,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 4,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0784,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 5,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0784,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 6,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0799,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 7,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0926,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 8,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0322,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 9,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0322,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 10,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0322,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 11,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03795,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 12,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03795,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 13,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03895,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 14,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03895,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 15,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0392,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 16,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0392,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 17,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03895,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 18,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03895,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 19,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03795,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 20,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.03795,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 21,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0322,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 22,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0322,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 23,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0322,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "c3-c3",
+      "k": 228.9,
+      "r0": 1.5354
+    },
+    {
+      "key": "c3-hc",
+      "k": 345.2,
+      "r0": 1.0962
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "c3-c3-c3",
+      "k": 59.87,
+      "theta0": 112.63
+    },
+    {
+      "key": "c3-c3-hc",
+      "k": 43.27,
+      "theta0": 109.68
+    },
+    {
+      "key": "hc-c3-hc",
+      "k": 35.8,
+      "theta0": 107.73
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "c3-c3-c3-c3",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c3-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "hc-c3-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.12,
+        1.0,
+        3.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

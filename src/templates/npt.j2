@@ -1,0 +1,19 @@
+# NPT equilibration: {{ name }}
+timestep {{ timestep_fs }}
+{% if study_type == 'layer_bulkff' or study_type == 'layer' %}
+# Layer system: pressure coupling in x,y only (z is fixed)
+fix {{ fix_id }} {{ thermo_group | default('all') }} npt temp {{ temp }} {{ temp }} {{ tdamp }} x {{ press }} {{ press }} {{ pdamp }} y {{ press }} {{ press }} {{ pdamp }}
+{% else %}
+# Bulk system: isotropic pressure coupling
+fix {{ fix_id }} {{ thermo_group | default('all') }} npt temp {{ temp }} {{ temp }} {{ tdamp }} iso {{ press }} {{ press }} {{ pdamp }}
+{% endif %}
+
+thermo {{ thermo_interval }}
+thermo_style custom step temp pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong
+thermo_modify flush yes
+dump d_{{ step_index }} all custom {{ dump_interval }} dump_{{ name }}.lammpstrj id type xu yu zu x y z vx vy vz
+
+run {{ nsteps }}
+unfix {{ fix_id }}
+undump d_{{ step_index }}
+write_restart restart.{{ name }}

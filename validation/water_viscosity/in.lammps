@@ -1,0 +1,113 @@
+# LAMMPS input script
+# Tier: viscosity
+# Force Field: bulk_ff_gaff2
+# Study Type: bulk
+# Temperature: 300.0 K
+# Pressure: 1.0 atm
+# Protocol hash: 45a31168
+
+# Initialization
+units real
+atom_style full
+boundary p p p
+
+# Force field settings (GAFF2 with charges)
+pair_style lj/cut/coul/long 12.0
+pair_modify mix arithmetic
+bond_style harmonic
+angle_style harmonic
+dihedral_style fourier
+improper_style cvff
+kspace_style pppm 1.0e-4
+special_bonds lj 0.0 0.0 0.5 coul 0.0 0.0 0.8333
+
+read_data water.data
+# Pair coefficients read from data file
+
+# Neighbor settings
+neighbor 2.0 bin
+neigh_modify delay 5 every 1 check yes
+
+
+# Step 1: minimize
+print "@@STAGE 0 minimize"
+# Energy minimization
+thermo 1000
+thermo_style custom step pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong
+thermo_modify flush yes
+minimize 1e-05 1e-07 50000 500000
+reset_timestep 0
+velocity all create 300.0 756599704 mom yes rot yes dist gaussian
+
+# Step 2: nvt_equilibration
+print "@@STAGE 1 nvt_equilibration"
+timestep 1.0
+fix nvt_1 all nvt temp 300.0 300.0 100.0
+
+thermo 1000
+thermo_style custom step temp pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong
+thermo_modify flush yes
+dump d_1 all custom 10000 dump_nvt_equilibration.lammpstrj id type xu yu zu x y z vx vy vz
+
+# Periodic checkpoint (every 100000 steps)
+restart 100000 restart.nvt_equilibration.a restart.nvt_equilibration.b
+
+run 300000
+unfix nvt_1
+undump d_1
+write_restart restart.nvt_equilibration
+
+# Step 3: npt_production
+print "@@STAGE 2 npt_production"
+timestep 1.0
+fix npt_2 all npt temp 300.0 300.0 100.0 iso 1.0 1.0 1000.0
+
+thermo 1000
+thermo_style custom step temp pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong
+thermo_modify flush yes
+dump d_2 all custom 15000 dump_npt_production.lammpstrj id type xu yu zu x y z vx vy vz
+
+# Periodic checkpoint (every 100000 steps)
+restart 100000 restart.npt_production.a restart.npt_production.b
+
+run 3000000
+unfix npt_2
+undump d_2
+write_restart restart.npt_production
+
+# Step 4: viscosity_nemd
+print "@@STAGE 3 viscosity_nemd"
+timestep 1.0
+fix nvt_3 all nvt temp 300.0 300.0 100.0
+
+# Muller-Plathe reverse non-equilibrium MD
+fix viscosity_3 all viscosity 100 x z 20
+
+compute stress all stress/atom NULL
+compute temp_profile all temp/profile 1 0 0 z 20
+fix_modify nvt_3 temp temp_profile
+
+# Velocity profile for viscosity calculation (20 bins matching fix viscosity)
+compute chunks_3 all chunk/atom bin/1d z lower 0.05 units reduced
+fix vprof_3 all ave/chunk 100 10 1000 chunks_3 vx file vprofile_viscosity_nemd.dat
+
+thermo 1000
+thermo_style custom step temp pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong f_viscosity_3
+thermo_modify flush yes
+dump d_3 all custom 25000 dump_viscosity_nemd.lammpstrj id type xu yu zu x y z vx vy vz
+
+# Periodic checkpoint (every 100000 steps)
+restart 100000 restart.viscosity_nemd.a restart.viscosity_nemd.b
+
+run 5000000
+unfix nvt_3
+unfix viscosity_3
+unfix vprof_3
+thermo_style custom step temp pe ke etotal press vol density ebond eangle edihed eimp evdwl ecoul epair emol elong
+uncompute chunks_3
+undump d_3
+write_restart restart.viscosity_nemd
+
+# Write final state
+write_data final.data
+write_restart final.restart

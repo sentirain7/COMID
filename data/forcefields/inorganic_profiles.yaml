@@ -1,0 +1,357 @@
+# Inorganic Material Parameterization Profiles (SSOT)
+#
+# This file is the Single Source of Truth for inorganic additive parameterization.
+# All charges, LJ parameters, and bonded coefficients are defined here.
+#
+# For layered mineral surfaces, interface_ff.py remains a fallback adapter
+# when a profile is not available.
+#
+# References:
+#   - CLAYFF: Cygan et al., J. Phys. Chem. B 2004, 108, 1255
+#   - INTERFACE FF: Heinz et al., Langmuir 2013, 29, 1754
+#   - Silica surface: Emami et al., Chem. Mater. 2014, 26, 2647
+#
+# v1.0 | 2026-04-08
+
+version: "1.0"
+
+profiles:
+  # ============================================================================
+  # SILICA (Hydroxylated) - ACTIVE
+  # ============================================================================
+  silica_hydroxylated_v1:
+    status: active
+    profile_version: "1.0"
+    family: silica
+    description: "Hydroxylated silica surface for bulk binder simulations"
+
+    citations:
+      charges: "Cygan et al., J. Phys. Chem. B 2004, 108, 1255 (CLAYFF)"
+      lj: "Heinz et al., Langmuir 2013, 29, 1754 (INTERFACE FF)"
+      bonded: "Emami et al., Chem. Mater. 2014, 26, 2647 (silica surface model)"
+
+    # Site rules: element + neighbor pattern -> site type + charge
+    # neighbor_pattern: {element: count} where count=0 means "must NOT have that neighbor"
+    site_rules:
+      Si_tet:
+        element: Si
+        neighbor_pattern: {O: 4}
+        charge: 2.1
+      O_br:
+        element: O
+        neighbor_pattern: {Si: 2, H: 0}
+        charge: -1.05
+      O_h:
+        element: O
+        neighbor_pattern: {Si: 1, H: 1}
+        charge: -0.95
+      H_oh:
+        element: H
+        neighbor_pattern: {O: 1}
+        charge: 0.425
+
+    # LJ parameters (INTERFACE FF) - units: mass (amu), epsilon (kcal/mol), sigma (Angstrom)
+    atom_types:
+      Si_tet:
+        mass: 28.085
+        epsilon: 0.00040
+        sigma: 3.302
+      O_br:
+        mass: 15.999
+        epsilon: 0.15540
+        sigma: 3.166
+      O_h:
+        mass: 15.999
+        epsilon: 0.15540
+        sigma: 3.166
+      H_oh:
+        mass: 1.008
+        epsilon: 0.01300
+        sigma: 1.085
+
+    # Bond coefficients (harmonic) - units: k (kcal/mol/A^2), r0 (Angstrom)
+    bond_types:
+      Si_tet-O_br:
+        k: 285.0
+        r0: 1.62
+      Si_tet-O_h:
+        k: 285.0
+        r0: 1.62
+      O_h-H_oh:
+        k: 553.0
+        r0: 0.96
+
+    # Angle coefficients (harmonic) - units: k (kcal/mol/rad^2), theta0 (degrees)
+    angle_types:
+      O_br-Si_tet-O_br:
+        k: 100.0
+        theta0: 109.47
+      O_br-Si_tet-O_h:
+        k: 100.0
+        theta0: 109.47
+      O_h-Si_tet-O_h:
+        k: 100.0
+        theta0: 109.47
+      Si_tet-O_h-H_oh:
+        k: 35.0
+        theta0: 109.47
+      Si_tet-O_br-Si_tet:
+        k: 100.0
+        theta0: 144.0
+
+    # Dihedral types: intentionally omitted
+    # Silica uses rigid tetrahedral/bridging structure where dihedral barriers
+    # are negligible. The network topology is maintained by Si-O-Si angles.
+    # See: Emami et al. 2014, Chem. Mater. 26, 2647 (silica surface model)
+
+    validation:
+      neutrality_tolerance: 0.01
+      required_elements: [Si, O]
+      dihedral_policy: allow_default_fallback  # explicit: no dihedral types needed
+
+  # ============================================================================
+  # CALCITE (CaCO3) - ACTIVE
+  # ============================================================================
+  calcite_caco3_v1:
+    status: active
+    profile_version: "1.0"
+    family: carbonate
+    description: "Calcite (CaCO3) surface — asphalt-aggregate interface"
+
+    citations:
+      # CLAYFF has no carbonate; calcite charges use the Raiteri-Gale formal-
+      # charge calcite model (matches the crystal-slab catalog for SiO2/Al2O3
+      # consistency). The "CLAYFF" charge label here was a mislabel (v01.05.22).
+      charges: "Raiteri et al., J. Phys. Chem. C 2010, 114, 5997 (calcite carbonate)"
+      lj: "Heinz et al., Langmuir 2013, 29, 1754 (INTERFACE FF)"
+      bonded: "Raiteri et al., J. Phys. Chem. C 2010, 114, 5997"
+
+    site_rules:
+      Ca_carb:
+        element: Ca
+        neighbor_pattern: {}     # Ca coordination varies at surfaces
+        charge: 2.0
+      C_carb:
+        element: C
+        neighbor_pattern: {O: 3}
+        charge: 1.123
+      O_carb:
+        element: O
+        neighbor_pattern: {}     # O coordination varies at surfaces
+        charge: -1.041
+
+    atom_types:
+      Ca_carb:
+        mass: 40.078
+        epsilon: 0.100
+        sigma: 3.200
+      C_carb:
+        mass: 12.011
+        epsilon: 0.068
+        sigma: 3.296
+      O_carb:
+        mass: 15.999
+        epsilon: 0.1554
+        sigma: 3.166
+
+    bond_types:
+      C_carb-O_carb:
+        k: 525.0
+        r0: 1.284
+      Ca_carb-O_carb:
+        k: 50.0
+        r0: 2.36
+
+    angle_types:
+      O_carb-C_carb-O_carb:
+        k: 120.0
+        theta0: 120.0
+
+    validation:
+      neutrality_tolerance: 0.01
+      required_elements: [Ca, C, O]
+      dihedral_policy: allow_default_fallback
+
+  # ============================================================================
+  # CORUNDUM (Al2O3) - ACTIVE
+  # ============================================================================
+  corundum_al2o3_v1:
+    status: active
+    profile_version: "1.0"
+    family: corundum
+    description: "Corundum (alpha-Al2O3) surface"
+
+    citations:
+      charges: "Cygan et al., J. Phys. Chem. B 2004, 108, 1255 (CLAYFF)"
+      lj: "Heinz et al., Langmuir 2013, 29, 1754 (INTERFACE FF)"
+
+    site_rules:
+      Al_oct:
+        element: Al
+        neighbor_pattern: {}     # Al coordination varies at surfaces
+        charge: 1.575
+      O_al:
+        element: O
+        neighbor_pattern: {}     # O coordination varies at surfaces
+        charge: -1.050
+
+    atom_types:
+      Al_oct:
+        mass: 26.982
+        epsilon: 0.005
+        sigma: 3.300
+      O_al:
+        mass: 15.999
+        epsilon: 0.1554
+        sigma: 3.166
+
+    bond_types:
+      Al_oct-O_al:
+        k: 250.0
+        r0: 1.91
+
+    angle_types:
+      O_al-Al_oct-O_al:
+        k: 80.0
+        theta0: 86.0
+      Al_oct-O_al-Al_oct:
+        k: 80.0
+        theta0: 130.0
+
+    validation:
+      neutrality_tolerance: 0.01
+      required_elements: [Al, O]
+      dihedral_policy: allow_default_fallback
+
+  # ============================================================================
+  # MONTMORILLONITE (Clay) - DRAFT (build blocked)
+  # ============================================================================
+  montmorillonite_v1:
+    status: draft
+    profile_version: "1.0"
+    family: clay
+    description: "Montmorillonite nanoclay (draft - structure/metadata inconsistency)"
+
+    # CLAYFF philosophy: lattice atoms (Si, Al, Mg, bridging O) interact
+    # only through nonbonded (LJ + Coulomb) potentials. The crystal
+    # structure is maintained by equilibrium positions, NOT by explicit
+    # bond/angle potentials. Only O-H bonds in hydroxyl groups and
+    # interlayer water are bonded.
+    # Reference: Cygan et al. 2004, Table 3 (SPC water bonds only).
+    bonded_philosophy: nonbonded_lattice
+
+    citations:
+      charges: "CLAYFF (Cygan et al. 2004)"
+      lj: "INTERFACE FF (Heinz et al. 2013)"
+      bonded: "CLAYFF nonbonded lattice; only O-H bonds (Cygan et al. 2004, Table 3)"
+
+    # Placeholder site rules - requires structure validation
+    site_rules:
+      Si_tet:
+        element: Si
+        neighbor_pattern: {O: 4}
+        charge: 2.1
+      Al_oct:
+        element: Al
+        neighbor_pattern: {O: 6}
+        charge: 1.575
+      Mg_oct:
+        element: Mg
+        neighbor_pattern: {O: 6}
+        charge: 1.36
+      O_bs:
+        element: O
+        neighbor_pattern: {Si: 1, Al: 1}
+        charge: -1.05
+      O_bts:
+        element: O
+        neighbor_pattern: {Si: 2}
+        charge: -1.05
+      O_h:
+        element: O
+        neighbor_pattern: {Al: 1, H: 1}
+        charge: -0.95
+      H_oh:
+        element: H
+        neighbor_pattern: {O: 1}
+        charge: 0.425
+
+    atom_types:
+      Si_tet:
+        mass: 28.085
+        epsilon: 0.00040
+        sigma: 3.302
+      Al_oct:
+        mass: 26.982
+        epsilon: 0.00500
+        sigma: 3.300
+      Mg_oct:
+        mass: 24.305
+        epsilon: 0.11100
+        sigma: 3.021
+      O_bs:
+        mass: 15.999
+        epsilon: 0.15540
+        sigma: 3.166
+      O_bts:
+        mass: 15.999
+        epsilon: 0.15540
+        sigma: 3.166
+      O_h:
+        mass: 15.999
+        epsilon: 0.15540
+        sigma: 3.166
+      H_oh:
+        mass: 1.008
+        epsilon: 0.01300
+        sigma: 1.085
+
+    # CLAYFF nonbonded lattice: only O-H bonds are explicit.
+    # Si-O, Al-O, Mg-O are intentionally absent — the lattice is held
+    # by Coulomb + LJ alone (Cygan et al. 2004).
+    bond_types:
+      O_h-H_oh:
+        k: 553.0
+        r0: 0.96
+
+    # Only the Si-O_h-H_oh angle for hydroxyl orientation
+    angle_types:
+      Al_oct-O_h-H_oh:
+        k: 30.0
+        theta0: 109.47
+
+    validation:
+      neutrality_tolerance: 0.05
+      required_elements: [Si, Al, O]
+
+  # ============================================================================
+  # CARBON SP2 (CNT, Graphene) - PASSTHROUGH
+  # ============================================================================
+  carbon_sp2_passthrough_v1:
+    status: active
+    profile_version: "1.0"
+    family: carbon
+    description: "Carbon sp2 materials (CNT, Graphene) - use organic GAFF2 pathway"
+
+    # This profile indicates that parameterization should pass through to
+    # the standard organic GAFF2 pathway (RDKit/AmberTools typing).
+    # The profile exists to document the decision and enable future
+    # site-specific handling if needed.
+    parameterization_mode: organic_gaff2_passthrough
+
+    citations:
+      note: "Standard GAFF2 aromatic carbon parameters apply"
+
+    # No site rules - passthrough to organic typing
+    site_rules: {}
+
+    # No explicit atom_types - uses organic registry CA (aromatic carbon)
+    atom_types: {}
+
+    bond_types: {}
+
+    angle_types: {}
+
+    validation:
+      neutrality_tolerance: 0.01
+      required_elements: [C]

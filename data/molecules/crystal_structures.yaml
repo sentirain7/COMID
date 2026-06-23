@@ -1,0 +1,899 @@
+library:
+  name: crystal_structures
+  version: '1.0'
+  description: Crystal structure catalog (SSOT). All loadable crystal entries must
+    be listed here.
+directory: crystal_structures
+structures:
+- crystal_id: crys_0091d568c0c5
+  name: SiO2-001-th25-xy38.62-oh4.6
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: queued
+  atom_count: 3306
+  nx: 8
+  ny: 9
+  nz: 5
+  thickness_angstrom: 25.0
+  xy_size_angstrom: 38.618
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_0091d568c0c5/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_0091d568c0c5/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: target_aware_replicate_with_bounded_fine_scale
+    target_xy_size_angstrom: 38.618
+    target_thickness_angstrom: 25.0
+    stabilization_exp_id: cr_X1_NA_crystal_298K_0bf134
+    submitted_job_id: 7eadbeda-3a37-45af-8a96-5ee991c6cdd6
+    charge_model: hydroxylated_finalize_v1
+- crystal_id: crys_f20db598399b
+  name: CaCO3-001-th25-xy39.21-oh4.6
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: queued
+  atom_count: 788
+  nx: 8
+  ny: 9
+  nz: 2
+  thickness_angstrom: 25.0
+  xy_size_angstrom: 39.206
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_f20db598399b/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_f20db598399b/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: target_aware_replicate_with_bounded_fine_scale
+    target_xy_size_angstrom: 39.206
+    target_thickness_angstrom: 25.0
+    stabilization_exp_id: cr_X1_NA_crystal_298K_3f5c53
+    submitted_job_id: 13b3012b-7e85-4487-b2b8-0f90c548f3dd
+    charge_model: hydroxylated_finalize_v1
+- crystal_id: crys_04dad1bfa82b
+  name: SiO2_34A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 2573
+  nx: 7
+  ny: 8
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 34.391000000000005
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_04dad1bfa82b/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_04dad1bfa82b/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 34.214631235171794
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 7
+      - 0
+    - - 0
+      - 8
+    n_cells_xy: 56
+    error_xy_pct: 0.5154776142871555
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 34.391000000000005
+    actual_ly_angstrom: 34.03826247034358
+    anisotropy_pct: 1.030955228574311
+- crystal_id: crys_f994b57576aa
+  name: SiO2_36A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 2895
+  nx: 7
+  ny: 9
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 38.29304527913653
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_f994b57576aa/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_f994b57576aa/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 36.34202263956827
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 7
+      - 0
+    - - 0
+      - 9
+    n_cells_xy: 63
+    error_xy_pct: 5.368503175836012
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 34.391000000000005
+    actual_ly_angstrom: 38.29304527913653
+    anisotropy_pct: 10.737006351672004
+- crystal_id: crys_2f618cd85b95
+  name: SiO2_39A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 3309
+  nx: 8
+  ny: 9
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 39.304
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_2f618cd85b95/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_2f618cd85b95/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 38.79852263956826
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 8
+      - 0
+    - - 0
+      - 9
+    n_cells_xy: 72
+    error_xy_pct: 1.3028263089487708
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 39.304
+    actual_ly_angstrom: 38.29304527913653
+    anisotropy_pct: 2.6056526178975234
+- crystal_id: crys_e78b55cd2541
+  name: SiO2_41A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 3676
+  nx: 8
+  ny: 10
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 42.547828087929474
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_e78b55cd2541/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_e78b55cd2541/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 40.92591404396474
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 8
+      - 0
+    - - 0
+      - 10
+    n_cells_xy: 80
+    error_xy_pct: 3.9630490408165153
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 39.304
+    actual_ly_angstrom: 42.547828087929474
+    anisotropy_pct: 7.926098081633031
+- crystal_id: crys_392ce5bfa97a
+  name: SiO2_43A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 4136
+  nx: 9
+  ny: 10
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 44.217
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_392ce5bfa97a/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_392ce5bfa97a/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 43.38241404396474
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 9
+      - 0
+    - - 0
+      - 10
+    n_cells_xy: 90
+    error_xy_pct: 1.9237886466840541
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 44.217
+    actual_ly_angstrom: 42.547828087929474
+    anisotropy_pct: 3.8475772933681083
+- crystal_id: crys_e43f4a569ba1
+  name: SiO2_46A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 4550
+  nx: 9
+  ny: 11
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 46.80261089672243
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_e43f4a569ba1/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_e43f4a569ba1/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 45.50980544836121
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 9
+      - 0
+    - - 0
+      - 11
+    n_cells_xy: 99
+    error_xy_pct: 2.840718468524606
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 44.217
+    actual_ly_angstrom: 46.80261089672243
+    anisotropy_pct: 5.681436937049212
+- crystal_id: crys_c42390fa1f81
+  name: SiO2_48A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 5055
+  nx: 10
+  ny: 11
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 49.13
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_c42390fa1f81/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_c42390fa1f81/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 47.96630544836121
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 10
+      - 0
+    - - 0
+      - 11
+    n_cells_xy: 110
+    error_xy_pct: 2.4260666748486237
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 49.13
+    actual_ly_angstrom: 46.80261089672243
+    anisotropy_pct: 4.852133349697232
+- crystal_id: crys_7cb06ae64d91
+  name: SiO2_50A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 5515
+  nx: 10
+  ny: 12
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 51.05739370551537
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_7cb06ae64d91/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_7cb06ae64d91/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 50.09369685275769
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 10
+      - 0
+    - - 0
+      - 12
+    n_cells_xy: 120
+    error_xy_pct: 1.9237886466840655
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 49.13
+    actual_ly_angstrom: 51.05739370551537
+    anisotropy_pct: 3.847577293368131
+- crystal_id: crys_787b4aae3612
+  name: SiO2_53A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 6066
+  nx: 11
+  ny: 12
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 54.043000000000006
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_787b4aae3612/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_787b4aae3612/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 52.55019685275769
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 11
+      - 0
+    - - 0
+      - 12
+    n_cells_xy: 132
+    error_xy_pct: 2.8407184685245985
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 54.043000000000006
+    actual_ly_angstrom: 51.05739370551537
+    anisotropy_pct: 5.681436937049183
+- crystal_id: crys_1d525cdff416
+  name: SiO2_55A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 6572
+  nx: 11
+  ny: 13
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 55.31217651430832
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_1d525cdff416/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_1d525cdff416/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 54.67758825715416
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 11
+      - 0
+    - - 0
+      - 13
+    n_cells_xy: 143
+    error_xy_pct: 1.160600306966036
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 54.043000000000006
+    actual_ly_angstrom: 55.31217651430832
+    anisotropy_pct: 2.321200613932072
+- crystal_id: crys_03fd4baa9de6
+  name: SiO2_57A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 7170
+  nx: 12
+  ny: 13
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 58.956
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_03fd4baa9de6/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_03fd4baa9de6/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 57.13408825715416
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 12
+      - 0
+    - - 0
+      - 13
+    n_cells_xy: 156
+    error_xy_pct: 3.188834894232704
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 58.956
+    actual_ly_angstrom: 55.31217651430832
+    anisotropy_pct: 6.377669788465408
+- crystal_id: crys_0c8523f86596
+  name: SiO2_59A_27A_001
+  source_type: preset
+  material: SiO2
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 7721
+  nx: 12
+  ny: 14
+  nz: 5
+  thickness_angstrom: 27.341264500000005
+  xy_size_angstrom: 59.56695932310127
+  hydroxylated: true
+  hydroxyl_density: 4.6
+  xyz_file_path: data/crystal_structures/crys_0c8523f86596/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_0c8523f86596/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 59.26147966155064
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 12
+      - 0
+    - - 0
+      - 14
+    n_cells_xy: 168
+    error_xy_pct: 0.5154776142871651
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 58.956
+    actual_ly_angstrom: 59.56695932310127
+    anisotropy_pct: 1.0309552285743302
+- crystal_id: crys_5813c5e04d21
+  name: CaCO3_35A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 3402
+  nx: 7
+  ny: 8
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 34.93
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_5813c5e04d21/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_5813c5e04d21/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 34.7508670595374
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 7
+      - 0
+    - - 0
+      - 8
+    n_cells_xy: 56
+    error_xy_pct: 0.5154776142871463
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 34.93
+    actual_ly_angstrom: 34.5717341190748
+    anisotropy_pct: 1.0309552285742927
+- crystal_id: crys_ed3670706fe6
+  name: CaCO3_37A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 3827
+  nx: 7
+  ny: 9
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 38.893200883959146
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_ed3670706fe6/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_ed3670706fe6/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 36.91160044197957
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 7
+      - 0
+    - - 0
+      - 9
+    n_cells_xy: 63
+    error_xy_pct: 5.368503175836013
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 34.93
+    actual_ly_angstrom: 38.893200883959146
+    anisotropy_pct: 10.737006351672026
+- crystal_id: crys_873d5256b243
+  name: CaCO3_39A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 4374
+  nx: 8
+  ny: 9
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 39.92
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_873d5256b243/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_873d5256b243/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 39.40660044197958
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 8
+      - 0
+    - - 0
+      - 9
+    n_cells_xy: 72
+    error_xy_pct: 1.3028263089487677
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 39.92
+    actual_ly_angstrom: 38.893200883959146
+    anisotropy_pct: 2.6056526178975177
+- crystal_id: crys_4ade08b250f8
+  name: CaCO3_42A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 4860
+  nx: 8
+  ny: 10
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 43.214667648843495
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_4ade08b250f8/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_4ade08b250f8/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 41.56733382442175
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 8
+      - 0
+    - - 0
+      - 10
+    n_cells_xy: 80
+    error_xy_pct: 3.963049040816527
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 39.92
+    actual_ly_angstrom: 43.214667648843495
+    anisotropy_pct: 7.926098081633038
+- crystal_id: crys_3dedccf418cf
+  name: CaCO3_44A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 5467
+  nx: 9
+  ny: 10
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 44.910000000000004
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_3dedccf418cf/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_3dedccf418cf/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 44.06233382442175
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 9
+      - 0
+    - - 0
+      - 10
+    n_cells_xy: 90
+    error_xy_pct: 1.9237886466840566
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 44.910000000000004
+    actual_ly_angstrom: 43.214667648843495
+    anisotropy_pct: 3.847577293368113
+- crystal_id: crys_1f339bbaa680
+  name: CaCO3_46A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 6014
+  nx: 9
+  ny: 11
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 47.536134413727844
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_1f339bbaa680/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_1f339bbaa680/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 46.223067206863924
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 9
+      - 0
+    - - 0
+      - 11
+    n_cells_xy: 99
+    error_xy_pct: 2.8407184685245968
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 44.910000000000004
+    actual_ly_angstrom: 47.536134413727844
+    anisotropy_pct: 5.6814369370491935
+- crystal_id: crys_01ff3bb6e299
+  name: CaCO3_49A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 6683
+  nx: 10
+  ny: 11
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 49.900000000000006
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_01ff3bb6e299/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_01ff3bb6e299/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 48.71806720686392
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 10
+      - 0
+    - - 0
+      - 11
+    n_cells_xy: 110
+    error_xy_pct: 2.4260666748486304
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 49.900000000000006
+    actual_ly_angstrom: 47.536134413727844
+    anisotropy_pct: 4.8521333496972465
+- crystal_id: crys_4cb9c1b20145
+  name: CaCO3_51A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 7290
+  nx: 10
+  ny: 12
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 51.8576011786122
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_4cb9c1b20145/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_4cb9c1b20145/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 50.8788005893061
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 10
+      - 0
+    - - 0
+      - 12
+    n_cells_xy: 120
+    error_xy_pct: 1.923788646684067
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 49.900000000000006
+    actual_ly_angstrom: 51.8576011786122
+    anisotropy_pct: 3.847577293368134
+- crystal_id: crys_363065b5fb24
+  name: CaCO3_53A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 8019
+  nx: 11
+  ny: 12
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 54.89
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_363065b5fb24/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_363065b5fb24/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 53.3738005893061
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 11
+      - 0
+    - - 0
+      - 12
+    n_cells_xy: 132
+    error_xy_pct: 2.840718468524582
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 54.89
+    actual_ly_angstrom: 51.8576011786122
+    anisotropy_pct: 5.681436937049164
+- crystal_id: crys_9bd2de141f4e
+  name: CaCO3_56A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 8687
+  nx: 11
+  ny: 13
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 56.17906794349655
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_9bd2de141f4e/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_9bd2de141f4e/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 55.534533971748274
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 11
+      - 0
+    - - 0
+      - 13
+    n_cells_xy: 143
+    error_xy_pct: 1.1606003069660464
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 54.89
+    actual_ly_angstrom: 56.17906794349655
+    anisotropy_pct: 2.321200613932093
+- crystal_id: crys_2da3d6170868
+  name: CaCO3_58A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 9477
+  nx: 12
+  ny: 13
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 59.88
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_2da3d6170868/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_2da3d6170868/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 58.02953397174828
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 12
+      - 0
+    - - 0
+      - 13
+    n_cells_xy: 156
+    error_xy_pct: 3.1888348942327047
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 59.88
+    actual_ly_angstrom: 56.17906794349655
+    anisotropy_pct: 6.377669788465397
+- crystal_id: crys_d76906c8c7c9
+  name: CaCO3_60A_34A_001
+  source_type: preset
+  material: CaCO3
+  surface: '001'
+  cell_mode: orthogonalized
+  status: ready
+  atom_count: 10206
+  nx: 12
+  ny: 14
+  nz: 2
+  thickness_angstrom: 34.124
+  xy_size_angstrom: 60.5005347083809
+  hydroxylated: true
+  hydroxyl_density: 3.5
+  xyz_file_path: data/crystal_structures/crys_d76906c8c7c9/crystal.xyz
+  lammps_data_file_path: data/crystal_structures/crys_d76906c8c7c9/crystal.data
+  cif_file_path: null
+  metadata:
+    cell_mode: orthogonalized
+    size_resolution: diagonal_replication
+    target_xy_size_angstrom: 60.19026735419045
+    target_thickness_angstrom: 25.0
+    transformation_matrix:
+    - - 12
+      - 0
+    - - 0
+      - 14
+    n_cells_xy: 168
+    error_xy_pct: 0.5154776142871709
+    matrix_search_used: false
+    matrix_search_fallback_reason: no_better_orthogonal_candidate
+    actual_lx_angstrom: 59.88
+    actual_ly_angstrom: 60.5005347083809
+    anisotropy_pct: 1.03095522857433

@@ -1,0 +1,1274 @@
+{
+  "schema_version": 2,
+  "ff_family": "organic_gaff2",
+  "charge_model": "am1_bcc",
+  "mol_id": "U-SA-Hopane",
+  "generator": "antechamber_am1bcc",
+  "generator_version": "ambertools_parmed",
+  "generation_profile": "baseline",
+  "provenance": "Generated from U-SA-Hopane.mol",
+  "canonical_smiles": null,
+  "formal_charge": 0,
+  "topology_hash": "",
+  "charge_sum": 0.0,
+  "atoms": [
+    {
+      "index": 1,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0674,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 2,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.05,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 3,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0664,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 4,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0537,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 5,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.029,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 6,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0754,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 7,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0377,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 8,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.02,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 9,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0704,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 10,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0704,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 11,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.023,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 12,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0417,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 13,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0684,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 14,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0704,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 15,
+      "element": "C",
+      "ff_type": "c5",
+      "charge": -0.037,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 16,
+      "element": "C",
+      "ff_type": "c5",
+      "charge": -0.0527,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 17,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0734,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 18,
+      "element": "C",
+      "ff_type": "c6",
+      "charge": -0.0734,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 19,
+      "element": "C",
+      "ff_type": "c5",
+      "charge": -0.0607,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 20,
+      "element": "C",
+      "ff_type": "c5",
+      "charge": -0.0784,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 21,
+      "element": "C",
+      "ff_type": "c5",
+      "charge": -0.0734,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 22,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0587,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 23,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0794,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 24,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0794,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 25,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0911,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 26,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0794,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 27,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0784,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 28,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0794,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 29,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.088102,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 30,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0861,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 31,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0861,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 32,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0851,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 33,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0921,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 34,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0871,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 35,
+      "element": "C",
+      "ff_type": "c3",
+      "charge": -0.0901,
+      "epsilon": 0.1078,
+      "sigma": 3.39771
+    },
+    {
+      "index": 36,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0382,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 37,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0382,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 38,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0412,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 39,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0412,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 40,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0477,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 41,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0392,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 42,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0392,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 43,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0377,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 44,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 45,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 46,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0357,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 47,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0357,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 48,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0507,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 49,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0377,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 50,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0377,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 51,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0347,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 52,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0347,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 53,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0517,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 54,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0407,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 55,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0407,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 56,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0412,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 57,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0412,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 58,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0487,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 59,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0412,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 60,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0412,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 61,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0437,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 62,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0437,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 63,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0487,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 64,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0412,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 65,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0412,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 66,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0392,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 67,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0392,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 68,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 69,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 70,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 71,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 72,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0397,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 73,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0382,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 74,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0382,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 75,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0377,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 76,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0377,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 77,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0327,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 78,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0327,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 79,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0327,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 80,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 81,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 82,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 83,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 84,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 85,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 86,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.035033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 87,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.035033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 88,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.035033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 89,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.034033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 90,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.034033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 91,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.034033,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 92,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0347,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 93,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0347,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 94,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.0347,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 95,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 96,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    },
+    {
+      "index": 97,
+      "element": "H",
+      "ff_type": "hc",
+      "charge": 0.033367,
+      "epsilon": 0.0208,
+      "sigma": 2.600177
+    }
+  ],
+  "bond_types": [
+    {
+      "key": "c6-c6",
+      "k": 226.8,
+      "r0": 1.5384
+    },
+    {
+      "key": "c6-c3",
+      "k": 223.8,
+      "r0": 1.5428
+    },
+    {
+      "key": "c6-c5",
+      "k": 226.5,
+      "r0": 1.5389
+    },
+    {
+      "key": "c5-c5",
+      "k": 220.1,
+      "r0": 1.5483
+    },
+    {
+      "key": "c5-c3",
+      "k": 227.6,
+      "r0": 1.5372
+    },
+    {
+      "key": "c3-c3",
+      "k": 228.9,
+      "r0": 1.5354
+    },
+    {
+      "key": "c6-hc",
+      "k": 342.8,
+      "r0": 1.0979
+    },
+    {
+      "key": "c5-hc",
+      "k": 346.4,
+      "r0": 1.0954
+    },
+    {
+      "key": "c3-hc",
+      "k": 345.2,
+      "r0": 1.0962
+    }
+  ],
+  "angle_types": [
+    {
+      "key": "c6-c6-c6",
+      "k": 60.18,
+      "theta0": 111.06
+    },
+    {
+      "key": "c6-c6-c3",
+      "k": 59.99,
+      "theta0": 111.43
+    },
+    {
+      "key": "c6-c6-c5",
+      "k": 60.17,
+      "theta0": 111.04
+    },
+    {
+      "key": "c6-c5-c5",
+      "k": 59.26,
+      "theta0": 113.75
+    },
+    {
+      "key": "c6-c5-c3",
+      "k": 60.33,
+      "theta0": 110.56
+    },
+    {
+      "key": "c5-c5-c5",
+      "k": 61.84,
+      "theta0": 103.83
+    },
+    {
+      "key": "c5-c5-c3",
+      "k": 59.33,
+      "theta0": 113.6
+    },
+    {
+      "key": "c5-c3-c3",
+      "k": 59.56,
+      "theta0": 113.7
+    },
+    {
+      "key": "c3-c3-c3",
+      "k": 59.87,
+      "theta0": 112.63
+    },
+    {
+      "key": "c3-c6-c3",
+      "k": 60.6,
+      "theta0": 108.88
+    },
+    {
+      "key": "c6-c6-hc",
+      "k": 43.23,
+      "theta0": 109.45
+    },
+    {
+      "key": "c6-c3-hc",
+      "k": 42.89,
+      "theta0": 110.63
+    },
+    {
+      "key": "c5-c5-hc",
+      "k": 42.65,
+      "theta0": 111.17
+    },
+    {
+      "key": "c5-c6-hc",
+      "k": 43.24,
+      "theta0": 109.34
+    },
+    {
+      "key": "c5-c3-hc",
+      "k": 43.06,
+      "theta0": 110.53
+    },
+    {
+      "key": "c6-c5-hc",
+      "k": 43.84,
+      "theta0": 106.42
+    },
+    {
+      "key": "c3-c5-hc",
+      "k": 43.6,
+      "theta0": 107.79
+    },
+    {
+      "key": "c3-c3-hc",
+      "k": 43.27,
+      "theta0": 109.68
+    },
+    {
+      "key": "hc-c6-hc",
+      "k": 35.93,
+      "theta0": 106.62
+    },
+    {
+      "key": "hc-c5-hc",
+      "k": 35.91,
+      "theta0": 107.22
+    },
+    {
+      "key": "hc-c3-hc",
+      "k": 35.8,
+      "theta0": 107.73
+    }
+  ],
+  "dihedral_types": [
+    {
+      "key": "c6-c6-c6-c6",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c6-c6-c6",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c5-c6-c6-c6",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c5-c5-c6-c6",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c5-c6-c6",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c6-c5-c5-c6",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c5-c5-c5-c6",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c5-c5-c5-c5",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c5-c5-c5",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c6-c6-c5",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c3-c5-c5",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c5-c5-c6",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c3-c3-c5",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c3-c3-c3",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c6-c6-c3",
+      "style": "fourier",
+      "coeffs": [
+        0.52,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c6-c6-c6-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c6-c6-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c6-c5-c5-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c6-c5-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c5-c5-c6-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c5-c5-c5-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c5-c6-c6-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c5-c5-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c6-c6-c5-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c5-c3-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c5-c5-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c3-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c3-c5-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c6-c6-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c6-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "c3-c5-c6-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.13,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "hc-c6-c6-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.12,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "hc-c5-c6-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.12,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "hc-c5-c5-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.12,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "hc-c3-c5-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.12,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "key": "hc-c3-c3-hc",
+      "style": "fourier",
+      "coeffs": [
+        0.12,
+        1.0,
+        3.0
+      ]
+    }
+  ],
+  "improper_types": [],
+  "improper_instances": []
+}

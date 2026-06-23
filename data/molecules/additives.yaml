@@ -1,0 +1,447 @@
+library:
+  name: additives
+  version: '1.2'
+  description: Additive catalog SSOT for binder-cell single/batch UI and backend
+  file_format: mol
+directory: additives
+# ff_assignment routing (Wave 0 SSOT — refreshed v00.99.41):
+# - Active inorganic additives with a curated profile → inorganic_profile + source_id
+# - Inorganic additives whose profile is still being curated → inorganic_profile
+#   + status: blocked_placeholder (router rejects, precompute/build fail-closed)
+# - Organic polymers/waxes/surfactants → organic_curated_artifact + GAFF2 source_id
+#   (the legacy organic_rdkit_legacy / organic_typing routes were retired in
+#   Phase 6 and are now mapped to BLOCKED for safety).
+# - Carbon allotropes (CNT, Graphine) use organic_curated_artifact route
+#   with individual source_ids (Carbon_Nano_Tube, Graphine). Their artifacts
+#   are auto-generated via fragment fallback (generator=fragment_fallback_gaff2)
+#   when antechamber fails due to bond path explosion. v01.00.12+.
+additives:
+  SiO2:
+    name: Silicon Dioxide
+    short_name: SiO2
+    atom_count: 84
+    molecular_weight: 1177.51
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: inorganic
+    structure_file: additives/SiO2.mol
+    parameterization:
+      mode: inorganic_profile
+      profile_id: silica_hydroxylated_v1
+      profile_version: "1.0"
+      status: active
+    ff_assignment:
+      route: inorganic_profile
+      status: active
+      source_id: silica_hydroxylated_v1
+      formal_charge: 0
+      canonical_smiles: null
+  Lignin:
+    name: Lignin
+    short_name: Lignin
+    atom_count: 350
+    molecular_weight: 1601.58
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: organic_polymer
+    structure_file: additives/Lignin.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Lignin
+      formal_charge: 0
+      canonical_smiles: null
+  SBS:
+    name: Styrene-Butadiene-Styrene
+    short_name: SBS
+    atom_count: 180
+    molecular_weight: 1200.0
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: polymer
+    subcategory: polymer
+    functional_tags:
+    - modifier
+    structure_file: additives/SBS.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: SBS
+      formal_charge: 0
+      canonical_smiles: null
+  PPA:
+    name: Polyphosphoric Acid
+    short_name: PPA
+    atom_count: 15
+    molecular_weight: 257.95
+    counts:
+      X1: 4
+      X2: 8
+      X3: 12
+    category: chemical
+    subcategory: surfactant
+    functional_tags:
+    - modifier
+    structure_file: additives/PPA.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: PPA
+      formal_charge: 0
+      canonical_smiles: null
+  Elvaloy:
+    name: Elvaloy Terpolymer
+    short_name: Elvaloy
+    atom_count: 120
+    molecular_weight: 850.0
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: polymer
+    subcategory: polymer
+    functional_tags:
+    - modifier
+    structure_file: additives/Elvaloy.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Elvaloy
+      formal_charge: 0
+      canonical_smiles: null
+  Sasobit:
+    name: Sasobit Wax
+    short_name: Sasobit
+    atom_count: 95
+    molecular_weight: 800.0
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: organic_wax
+    subcategory: surfactant
+    functional_tags:
+    - modifier
+    structure_file: additives/Sasobit.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Sasobit
+      formal_charge: 0
+      canonical_smiles: null
+  NanoClay:
+    name: Nanoclay (Montmorillonite)
+    short_name: NanoClay
+    atom_count: 200
+    molecular_weight: 1500.0
+    counts:
+      X1: 1
+      X2: 2
+      X3: 3
+    category: inorganic
+    subcategory: nanoparticle
+    functional_tags:
+    - anti-aging
+    structure_file: additives/NanoClay.mol
+    parameterization:
+      mode: inorganic_profile
+      profile_id: montmorillonite_v1
+      status: blocked_placeholder
+    ff_assignment:
+      route: inorganic_profile
+      status: blocked_placeholder
+      source_id: montmorillonite_v1
+      formal_charge: 0
+      canonical_smiles: null
+  CRM:
+    name: Crumb Rubber Modifier
+    short_name: CRM
+    atom_count: 250
+    molecular_weight: 1800.0
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: recycled_polymer
+    subcategory: polymer
+    functional_tags:
+    - modifier
+    structure_file: additives/CRM.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: CRM
+      formal_charge: 0
+      canonical_smiles: null
+  Biopolymer_Xanthan2:
+    name: Biopolymer Xanthan
+    short_name: Xanthan
+    atom_count: 119
+    molecular_weight: 961.80
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: polymer
+    subcategory: polymer
+    functional_tags:
+    - modifier
+    structure_file: additives/Biopolymer_Xanthan2.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Biopolymer_Xanthan2
+      formal_charge: 0
+      canonical_smiles: null
+  Carbon_Nano_Tube:
+    name: Carbon Nano Tube
+    short_name: CNT
+    atom_count: 80
+    molecular_weight: 740.82
+    counts:
+      X1: 1
+      X2: 2
+      X3: 3
+    category: inorganic
+    subcategory: nanoparticle
+    functional_tags:
+    - anti-aging
+    structure_file: additives/Carbon_Nano_Tube.mol
+    parameterization:
+      mode: organic_gaff2
+      status: active
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Carbon_Nano_Tube
+      formal_charge: 0
+      canonical_smiles: null
+  Emulsifiers_CetyltrimethylammoniumChloride:
+    name: Cetyltrimethylammonium Chloride
+    short_name: CTAC
+    atom_count: 62
+    molecular_weight: 318.99
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: chemical
+    subcategory: surfactant
+    functional_tags:
+    - modifier
+    structure_file: additives/Emulsifiers_CetyltrimethylammoniumChloride.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Emulsifiers_CetyltrimethylammoniumChloride
+      formal_charge: 0
+      canonical_smiles: null
+  Emulsifiers_SodiumDodecylbenzeneSulfonate:
+    name: Sodium Dodecylbenzene Sulfonate
+    short_name: SDBS
+    atom_count: 52
+    molecular_weight: 348.48
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: chemical
+    subcategory: surfactant
+    functional_tags:
+    - modifier
+    structure_file: additives/Emulsifiers_SodiumDodecylbenzeneSulfonate.mol
+    ff_assignment:
+      route: blocked
+      status: blocked_placeholder
+      source_id: Emulsifiers_SodiumDodecylbenzeneSulfonate
+      formal_charge: 0
+      canonical_smiles: null
+  Epoxy_PolyEpoxyResinE51:
+    name: Poly Epoxy Resin E51
+    short_name: EpoxyE51
+    atom_count: 46
+    molecular_weight: 576.43
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: polymer
+    subcategory: polymer
+    functional_tags:
+    - modifier
+    structure_file: additives/Epoxy_PolyEpoxyResinE51.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Epoxy_PolyEpoxyResinE51
+      formal_charge: 0
+      canonical_smiles: null
+  Graphine:
+    name: Graphine
+    short_name: Graphene
+    atom_count: 88
+    molecular_weight: 748.88
+    counts:
+      X1: 1
+      X2: 2
+      X3: 3
+    category: inorganic
+    subcategory: nanoparticle
+    functional_tags:
+    - anti-aging
+    structure_file: additives/Graphine.mol
+    parameterization:
+      mode: organic_gaff2
+      status: active
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Graphine
+      formal_charge: 0
+      canonical_smiles: null
+  "PhaseChange_Palmitic Acid":
+    name: Phase Change Palmitic Acid
+    short_name: Palmitic
+    atom_count: 50
+    molecular_weight: 256.43
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: organic_wax
+    subcategory: surfactant
+    functional_tags:
+    - modifier
+    structure_file: additives/PhaseChange_Palmitic Acid.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: PhaseChange_Palmitic Acid
+      formal_charge: 0
+      canonical_smiles: CCCCCCCCCCCCCCCC(=O)O
+  "PhaseChange_Stearic Acid":
+    name: Phase Change Stearic Acid
+    short_name: Stearic
+    atom_count: 56
+    molecular_weight: 284.48
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: organic_wax
+    subcategory: surfactant
+    functional_tags:
+    - modifier
+    structure_file: additives/PhaseChange_Stearic Acid.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: PhaseChange_Stearic Acid
+      formal_charge: 0
+      canonical_smiles: CCCCCCCCCCCCCCCCCC(=O)O
+  PolyLongchaneAlkanes:
+    name: Poly Longchain Alkanes
+    short_name: LongAlkane
+    atom_count: 86
+    molecular_weight: 394.77
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: organic_wax
+    subcategory: surfactant
+    functional_tags:
+    - modifier
+    structure_file: additives/PolyLongchaneAlkanes.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: PolyLongchaneAlkanes
+      formal_charge: 0
+      canonical_smiles: null
+  Polymer_PolyEthylene:
+    name: Poly Ethylene
+    short_name: PE
+    atom_count: 212
+    molecular_weight: 983.91
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: polymer
+    subcategory: polymer
+    functional_tags:
+    - modifier
+    structure_file: additives/Polymer_PolyEthylene.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Polymer_PolyEthylene
+      formal_charge: 0
+      canonical_smiles: null
+  Polymer_Polycis14Butadiene:
+    name: Polycis-1,4-Butadiene
+    short_name: PBD
+    atom_count: 58
+    molecular_weight: 300.53
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: polymer
+    subcategory: polymer
+    functional_tags:
+    - modifier
+    structure_file: additives/Polymer_Polycis14Butadiene.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Polymer_Polycis14Butadiene
+      formal_charge: 0
+      canonical_smiles: null
+  Polymer_Polycis14Isoprene:
+    name: Polycis-1,4-Isoprene
+    short_name: PIP
+    atom_count: 73
+    molecular_weight: 370.66
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: polymer
+    subcategory: polymer
+    functional_tags:
+    - modifier
+    structure_file: additives/Polymer_Polycis14Isoprene.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: Polymer_Polycis14Isoprene
+      formal_charge: 0
+      canonical_smiles: null
+  SBS_3_7:
+    name: Styrene-Butadiene-Styrene 3:7
+    short_name: SBS3:7
+    atom_count: 160
+    molecular_weight: 1019.51
+    counts:
+      X1: 2
+      X2: 4
+      X3: 6
+    category: polymer
+    subcategory: polymer
+    functional_tags:
+    - modifier
+    structure_file: additives/SBS_3_7.mol
+    ff_assignment:
+      route: organic_curated_artifact
+      status: active
+      source_id: SBS_3_7
+      formal_charge: 0
+      canonical_smiles: null

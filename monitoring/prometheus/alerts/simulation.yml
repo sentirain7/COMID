@@ -1,0 +1,88 @@
+# Alert rules for Asphalt MD Simulations
+
+groups:
+  - name: simulation_alerts
+    interval: 30s
+    rules:
+      # High failure rate alert
+      - alert: HighSimulationFailureRate
+        expr: |
+          (
+            sum(rate(simulation_failures_total[5m])) /
+            sum(rate(simulation_completed_total[5m]))
+          ) > 0.2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High simulation failure rate"
+          description: "More than 20% of simulations are failing in the last 5 minutes"
+
+      # Queue backlog alert
+      - alert: SimulationQueueBacklog
+        expr: simulation_queue_length > 50
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Large simulation queue backlog"
+          description: "Queue has {{ $value }} pending simulations"
+
+      # Long running simulation
+      - alert: LongRunningSimulation
+        expr: simulation_duration_seconds > 86400
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Simulation running for more than 24 hours"
+          description: "Simulation {{ $labels.exp_id }} has been running for {{ $value | humanizeDuration }}"
+
+      # GPU idle alert
+      - alert: GPUIdleWithPendingJobs
+        expr: |
+          (simulation_queue_length > 0) and
+          (avg(gpu_utilization_percent) < 10)
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "GPU idle while jobs are pending"
+          description: "GPU utilization is low ({{ $value }}%) but queue has pending jobs"
+
+      # Disk space alert
+      - alert: LowDiskSpace
+        expr: |
+          (node_filesystem_avail_bytes{mountpoint="/"} / 
+           node_filesystem_size_bytes{mountpoint="/"}) < 0.1
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Low disk space"
+          description: "Less than 10% disk space remaining"
+
+  - name: infrastructure_alerts
+    rules:
+      # Redis connection issues
+      - alert: RedisDown
+        expr: redis_up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Redis is down"
+          description: "Redis instance is not responding"
+
+      # API health
+      - alert: APIHighLatency
+        expr: |
+          histogram_quantile(0.95, 
+            rate(http_request_duration_seconds_bucket[5m])
+          ) > 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "API high latency"
+          description: "95th percentile latency is above 1 second"

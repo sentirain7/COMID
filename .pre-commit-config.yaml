@@ -1,0 +1,24 @@
+# Pre-commit hooks for asphalt-binder-agent
+# Install: pre-commit install
+# Run all: pre-commit run --all-files
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.7
+    hooks:
+      - id: ruff
+        name: ruff lint
+        args: [--fix, --exit-non-zero-on-fix]
+        types_or: [python, pyi]
+      - id: ruff-format
+        name: ruff format
+        types_or: [python, pyi]
+
+  - repo: local
+    hooks:
+      - id: mypy-core
+        name: mypy (core modules)
+        entry: bash -c 'PYTHONPATH=src asphalt_venv/bin/python -m mypy src/database src/builder src/protocols src/metrics'
+        language: system
+        pass_filenames: false
+        files: ^src/(database|builder|protocols|metrics)/
+        types: [python]

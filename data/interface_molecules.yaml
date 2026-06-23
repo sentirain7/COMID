@@ -1,0 +1,42 @@
+library:
+  name: interface_molecules
+  version: '1.0'
+  description: Interface molecule cell catalog for binder-aggregate interaction studies
+directory: interface_cells
+cells:
+- cell_id: ifc_da27dd9b
+  name: H2O_d1.00_35x35x10
+  status: ready
+  source_hash: e48af44353f9be6f9914ca025a4cf975adff82f80ec393235dda62879472b262
+  mol_id: H2O
+  atom_count: 1227
+  molecule_count: 409
+  target_density: 1.0
+  actual_density: 0.998781715894751
+  boundary_mode: ppf
+  lx_angstrom: 35.0
+  ly_angstrom: 35.0
+  lz_angstrom: 10.0
+  lammps_data_file_path: data/interface_cells/ifc_da27dd9b/cell.data
+  xyz_file_path: data/interface_cells/ifc_da27dd9b/cell.xyz
+  metadata: {}
+  created_at: '2026-04-23T07:33:46.251605+00:00'
+  updated_at: '2026-04-23T07:33:46.251605+00:00'
+- cell_id: ifc_ea279c58
+  name: H2O_d1.00_45x45x10
+  status: ready
+  source_hash: 0ff615ff2651240128f2043768999ee9dccc6a718c5a9b425c46d5ccb37a3253
+  mol_id: H2O
+  atom_count: 2031
+  molecule_count: 677
+  target_density: 1.0
+  actual_density: 1.0001082393484995
+  boundary_mode: ppf
+  lx_angstrom: 45.0
+  ly_angstrom: 45.0
+  lz_angstrom: 10.0
+  lammps_data_file_path: data/interface_cells/ifc_ea279c58/cell.data
+  xyz_file_path: data/interface_cells/ifc_ea279c58/cell.xyz
+  metadata: {}
+  created_at: '2026-04-23T07:43:07.325237+00:00'
+  updated_at: '2026-04-23T07:43:07.325237+00:00'
